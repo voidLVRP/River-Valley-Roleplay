@@ -1,6 +1,5 @@
 body {
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover;
+    background: #000; /* Dark background for Christmas theme */
     color: white;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,7 +7,7 @@ body {
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background: #222; /* Darker shade for the navbar */
     padding: 10px 0;
     display: flex;
     justify-content: center;
