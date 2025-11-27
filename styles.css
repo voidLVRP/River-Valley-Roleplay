@@ -1,75 +1,86 @@
-body {
-    background: #121212;
-    color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header {
-    background: #1e1e1e;
-    padding: 10px 20px;
+/* Layout */
+body, html {
+    height: 100%;
+    background: #f5f7fa;
+}
+
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    min-height: 100vh;
 }
 
-.logo {
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #1e1e2f;
     color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.nav a {
-    color: #b3b3b3;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
-}
-
-.nav a:hover {
-    color: #fff;
-}
-
-.main-content {
-    padding: 50px;
-}
-
-.hero {
-    background: #1e1e1e;
-    padding: 50px;
-    border-radius: 8px;
+.logo h2 {
+    font-size: 1.6rem;
     text-align: center;
+    margin-bottom: 30px;
+    color: #00aaff;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin: 0;
+.sidebar-nav a {
+    display: block;
+    color: #cfd1dc;
+    text-decoration: none;
+    margin: 12px 0;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #00aaff;
     color: #fff;
 }
 
-.hero-content p {
-    font-size: 20px;
-    margin: 20px 0;
-    color: #d3d3d3;
+.sidebar-nav a.active {
+    background-color: #0077cc;
+    color: #fff;
 }
 
-.button {
-    background: #4db7ff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    color: #000;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px;
-    transition: background 0.3s;
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.button:hover {
-    background: #3a8eff;
+.about-section {
+    max-width: 800px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1e1e2f;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
 }
