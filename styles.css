@@ -48,22 +48,32 @@ h2 {
     margin: 10px 0;
 }
 
-p {
-    font-size: 20px;
+.command-section {
     margin: 20px 0;
 }
 
-.button {
-    background: #4db7ff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    color: #000;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 10px;
+.command-section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.button:hover {
-    background: #3a8eff;
+.command-section ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.gold {
+    color: gold;
 }
