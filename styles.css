@@ -59,6 +59,9 @@ h2 {
 .command-section ul li {
     margin: 10px 0;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .green {
@@ -75,4 +78,19 @@ h2 {
 
 .gold {
     color: gold;
+}
+
+.button {
+    background: #4db7ff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: #000;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.button:hover {
+    background: #3a8eff;
 }
