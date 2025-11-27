@@ -1,14 +1,13 @@
 body {
-    background: #1a1a1a; /* Dark background */
+    background: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s;
 }
 
 .header {
-    background: #2b2b2b;
+    background: #1e1e1e;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -18,7 +17,7 @@ body {
     z-index: 1000;
 }
 
-.logo a {
+.logo {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
@@ -41,12 +40,10 @@ body {
 }
 
 .hero {
-    background: #2b2b2b;
+    background: #1e1e1e;
     padding: 50px;
     border-radius: 8px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
 .hero-content h1 {
@@ -76,39 +73,3 @@ body {
 .button:hover {
     background: #3a8eff;
 }
-
-/* Christmas Theme */
-.snow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('snowflakes.png') repeat;
-    pointer-events: none;
-    z-index: 1;
-}
-
-@keyframes snowfall {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
-}
-
-.snowflake {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    background: url('snowflake.png') no-repeat;
-    opacity: 0.8;
-    animation: snowfall 10s linear infinite;
-}
-
-/* Randomize snowflake positions */
-.snowflake:nth-child(1) { animation-duration: 4s; left: 5%; }
-.snowflake:nth-child(2) { animation-duration: 6s; left: 20%; }
-.snowflake:nth-child(3) { animation-duration: 8s; left: 35%; }
-.snowflake:nth-child(4) { animation-duration: 5s; left: 50%; }
-.snowflake:nth-child(5) { animation-duration: 7s; left: 65%; }
-.snowflake:nth-child(6) { animation-duration: 9s; left: 80%; }
