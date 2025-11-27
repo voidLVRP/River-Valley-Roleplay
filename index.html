@@ -4,136 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River Valley Roleplay | Whitelisted</title>
-    <style>
-        body {
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-        .content {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        h1 {
-            font-size: 48px;
-            color: #4db7ff;
-            margin: 0;
-        }
-        h2 {
-            font-size: 24px;
-            color: #888;
-            margin: 10px 0;
-        }
-        p {
-            font-size: 20px;
-            margin: 20px 0;
-        }
-        .button {
-            background: #4db7ff;
-            padding: 15px 25px;
-            border-radius: 8px;
-            color: #000;
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 10px;
-        }
-        .button:hover {
-            background: #3a8eff;
-        }
-        .applications, .chain-of-command {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="navbar">
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#applications" onclick="showSection('applications')">Applications</a>
-        <a href="#discord" onclick="showSection('discord')">Discord</a>
-        <a href="#chain-of-command" onclick="showSection('chain-of-command')">Chain of Command</a>
-        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="index.html">Home</a>
+        <a href="applications.html">Applications</a>
+        <a href="https://discord.gg/Bh56yDAmah" target="_blank">Discord</a>
+        <a href="chain-of-command.html">Chain of Command</a>
+        <a href="about.html">About</a>
     </div>
 
-    <div class="content" id="home">
+    <div class="content">
         <h1>River Valley Roleplay</h1>
         <h2>Whitelisted ERLC / FiveM Roleplay Community</h2>
         <p>Professional. Serious. Immersive.</p>
-        <a class="button" href="https://discord.gg/Bh56yDAmah">Join Our Discord</a>
+        <a class="button" href="https://discord.gg/Bh56yDAmah" target="_blank">Join Our Discord</a>
     </div>
-
-    <div class="content applications" id="applications">
-        <h1>Applications</h1>
-        <p>Choose the application that suits your role in the community.</p>
-        <a class="button" href="#">RCPD Application</a>
-        <a class="button" href="#">LCSO Application</a>
-        <a class="button" href="#">SAFR Application</a>
-        <a class="button" href="#">Staff Application</a>
-    </div>
-
-    <div class="content" id="discord">
-        <h1>Discord</h1>
-        <p>Join our Discord server to stay connected with the community.</p>
-        <a class="button" href="https://discord.gg/Bh56yDAmah">Join Discord</a>
-    </div>
-
-    <div class="content chain-of-command" id="chain-of-command">
-        <h1>Chain of Command</h1>
-        <h2>Ownership Team</h2>
-        <p>Community Overseer | <span style="color: green;">Void</span></p>
-        <p>Staff Overseer | <span style="color: red;">E. Black</span></p>
-        <p>Emergency Services Overseer | <span style="color: blue;">Sky</span></p>
-        <h2>Staff Team</h2>
-        <p>Head Admin | <span style="color: gold;">401</span> | <span style="color: red;">E</span> | <span style="color: red;">Waffle</span></p>
-        <p>Head Admin | <span style="color: gold;">402</span> | <span style="color: red;">M</span> | <span style="color: red;">Camonie</span></p>
-        <p>Senior Admin | <span style="color: red;">! Day One</span></p>
-        <p>Head Moderator | <span style="color: red;">U</span> | <span style="color: red;">Choopymaloo</span></p>
-        <p>Moderator | <span style="color: red;">445</span> | <span style="color: red;">E</span> | <span style="color: red;">Jinxz</span></p>
-    </div>
-
-    <div class="content" id="about">
-        <h1>About</h1>
-        <p>Find out more about River Valley Roleplay and our mission.</p>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.content');
-            sections.forEach(section => {
-                if (section.id === sectionId) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
-        }
-    </script>
 </body>
 </html>
