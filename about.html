@@ -1,87 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — River Valley Roleplay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - River Valley Roleplay</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- header (same markup as index) -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z" fill="currentColor"/></svg>
-        River Valley Roleplay
-      </a>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>River Valley RP</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html">🏠 Home</a>
+                <a href="applications.html">📝 Applications</a>
+                <a href="https://discord.gg/Bh56yDAmah" target="_blank">💬 Discord</a>
+                <a href="chain-of-command.html">📜 Chain of Command</a>
+                <a href="about.html" class="active">ℹ️ About</a>
+            </nav>
+        </aside>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="about-section">
+                <h1>About River Valley Roleplay</h1>
+                <p>
+                    River Valley Roleplay is a Whitelisted ERLC Roleplay Community dedicated to providing a professional,
+                    serious, and immersive roleplaying experience. We pride ourselves on maintaining high standards for
+                    realistic roleplay, engaging storylines, and a friendly, community-driven environment.
+                </p>
 
-      <nav class="nav" id="main-nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="applications.html">Applications</a>
-        <a class="nav-link" href="chain-of-command.html">Chain of Command</a>
-        <a class="nav-link active" href="about.html">About</a>
-        <a class="button button-ghost" href="https://discord.gg/Bh56yDAmah" target="_blank" rel="noopener">Join Discord</a>
-      </nav>
+                <p>
+                    Whether you’re joining as law enforcement, medical personnel, or a civilian, our server offers
+                    structured opportunities to participate in diverse and exciting roleplay scenarios.
+                </p>
+            </section>
+        </main>
     </div>
-  </header>
-
-  <main class="container content">
-    <section class="card card-elevated about-hero">
-      <h1>About River Valley Roleplay</h1>
-      <p class="lead">River Valley Roleplay is a whitelisted ERLC / FiveM Roleplay community dedicated to providing a professional, serious, and immersive roleplaying experience. We prioritize realistic roleplay, consistency, and staff-led training.</p>
-
-      <div class="about-grid">
-        <div>
-          <h3>Our Mission</h3>
-          <p>To create a respectful and realistic ERLC environment where players can develop character, improve roleplay skills, and participate in well-structured operations.</p>
-        </div>
-
-        <div>
-          <h3>How we operate</h3>
-          <ul>
-            <li>Strict whitelisting — applications reviewed by staff</li>
-            <li>FTO & training nights for all emergency services</li>
-            <li>Clear chain of command and promotion system</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Join Us</h3>
-          <p>We run regular training, community events, and recruitment drives. If you want serious ERLC RP, start by applying or joining our Discord.</p>
-          <a class="button" href="applications.html">Apply</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>River Valley Roleplay</h4>
-        <p class="muted">Serious ERLC FiveM community. Join our Discord to apply.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="applications.html">Applications</a></li>
-          <li><a href="chain-of-command.html">Chain of Command</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p class="muted">Questions? <a href="https://discord.gg/Bh56yDAmah" target="_blank" rel="noopener">Join Discord</a></p>
-      </div>
-    </div>
-
-    <div class="copyright">
-      © <span id="cur-year-2"></span> River Valley Roleplay — All rights reserved
-    </div>
-  </footer>
 </body>
 </html>
