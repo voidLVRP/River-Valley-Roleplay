@@ -1,5 +1,5 @@
 body {
-    background: #000; /* Dark background for Christmas theme */
+    background: #1a1a1a; /* Dark background */
     color: white;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,27 +7,30 @@ body {
 }
 
 .navbar {
-    background: #222; /* Darker shade for the navbar */
+    background: #2b2b2b; /* Darker shade for the navbar */
     padding: 10px 0;
     display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-.navbar a {
+.logo a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
 }
 
-.navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #4db7ff;
 }
 
 .content {
@@ -35,49 +38,20 @@ body {
     padding: 100px 20px;
 }
 
-h1 {
+.hero {
+    background: #2b2b2b; /* Darker shade for the hero section */
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.hero h1 {
     font-size: 48px;
-    color: #4db7ff;
     margin: 0;
 }
 
-h2 {
-    font-size: 24px;
-    color: #888;
-    margin: 10px 0;
-}
-
-.command-section {
+.hero p {
+    font-size: 20px;
     margin: 20px 0;
-}
-
-.command-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.command-section ul li {
-    margin: 10px 0;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.green {
-    color: green;
-}
-
-.red {
-    color: red;
-}
-
-.blue {
-    color: blue;
-}
-
-.gold {
-    color: gold;
 }
 
 .button {
@@ -86,7 +60,7 @@ h2 {
     border-radius: 8px;
     color: #000;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin: 10px;
 }
