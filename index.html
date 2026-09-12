@@ -255,22 +255,22 @@
         <div id="cadLoginGateway" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="lg:col-span-1 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6">
             <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-2 text-emerald-400">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
-              <span>Join Workstation</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              <span>Agency Login</span>
             </h3>
             <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-              Enter the authorized department join code to open your agency's Mobile Data Terminal or Civilian Bureau.
+              First responder clock-in codes are confidential. Enter your department-issued badge code to open your workstation.
             </p>
 
             <div class="space-y-3">
               <input 
                 type="text" 
                 id="siteCadCodeInput" 
-                placeholder="E.G. LCSO-991, CIV-100" 
+                placeholder="ENTER BADGE JOIN CODE" 
                 onkeydown="if(event.key==='Enter') siteCadLogin()"
-                class="w-full bg-[#030905] border border-emerald-800 rounded-xl px-4 py-3 text-center text-sm font-mono font-black tracking-widest text-emerald-300 focus:outline-none focus:border-emerald-400 uppercase"
+                class="w-full bg-[#030905] border border-emerald-800 rounded-xl px-4 py-3 text-center text-sm font-mono font-black tracking-widest text-emerald-300 focus:outline-none focus:border-emerald-400 uppercase placeholder:text-slate-600 placeholder:text-xs"
               />
-              <div id="siteCadError" class="text-xs text-red-400 font-semibold hidden">Invalid join code. See department codes on right.</div>
+              <div id="siteCadError" class="text-xs text-red-400 font-semibold hidden">Invalid or unauthorized code. Check your agency channel in Discord.</div>
               <button 
                 onclick="siteCadLogin()"
                 class="w-full py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/80 transition-all uppercase tracking-wider"
@@ -278,55 +278,116 @@
                 Authenticate Terminal
               </button>
             </div>
+
+            <!-- Civilian Quick Access Notice -->
+            <div class="mt-6 pt-4 border-t border-emerald-900/60">
+              <div class="text-[11px] text-slate-400 mb-2">Not in a department? Civilian access is open to everyone:</div>
+              <button 
+                onclick="siteCadCivilianLogin()"
+                class="w-full py-2 bg-emerald-950/90 hover:bg-emerald-900 text-emerald-300 border border-emerald-700/80 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5"
+              >
+                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                <span>Launch Civilian Terminal (Public)</span>
+              </button>
+            </div>
           </div>
 
-          <!-- Codes Reference Table -->
-          <div class="lg:col-span-2 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6">
-            <div class="text-xs uppercase font-bold text-slate-300 mb-3 flex items-center justify-between">
-              <span>Department Join Roster &amp; Codes</span>
-              <span class="text-[11px] text-emerald-400 font-mono">5 Agencies Active</span>
+          <!-- Agencies List (Codes Hidden / Protected) -->
+          <div class="lg:col-span-2 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="text-xs uppercase font-bold text-slate-300 mb-3 flex items-center justify-between">
+                <span>Active Server Agencies</span>
+                <span class="text-[11px] text-amber-400 font-mono flex items-center gap-1">
+                  <svg class="w-3 h-3 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  Codes Restricted
+                </span>
+              </div>
+
+              <!-- Civilian Bureau (100% Public Access) -->
+              <div class="mb-3 bg-gradient-to-r from-[#092213] to-[#0a1e12] border border-emerald-600/80 p-4 rounded-xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1.5">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-black tracking-wider px-2 py-0.5 rounded uppercase font-mono bg-emerald-950 text-emerald-300 border border-emerald-700">CIV</span>
+                    <span class="font-bold text-white text-sm">Civilian Operations Bureau</span>
+                  </div>
+                  <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 w-fit">
+                    Open Public Access
+                  </span>
+                </div>
+                <p class="text-xs text-slate-300 mb-3">
+                  Create roleplay personas, register vehicles, view DMV records, and transmit emergency 911 calls to active dispatchers.
+                </p>
+                <button onclick="siteCadCivilianLogin()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg transition-all shadow-sm flex items-center gap-1.5">
+                  <span>Enter as Civilian (Instant)</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </button>
+              </div>
+
+              <!-- First Responder Confidential Agencies -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <!-- LCSO -->
+                <div class="bg-[#091e12] border border-emerald-900/80 p-3.5 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-bold text-white">Liberty County Sheriff</span>
+                    <span id="codeTagLCSO" class="font-mono text-slate-400 text-[10px] font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-950 flex items-center gap-1">
+                      <svg class="w-2.5 h-2.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                      <span class="cadCodeMask">BADGE PIN</span>
+                    </span>
+                  </div>
+                  <span class="text-[11px] text-slate-400">County patrol, highway, warrants &bull; Code issued in Discord</span>
+                </div>
+
+                <!-- RCPD -->
+                <div class="bg-[#091e12] border border-emerald-900/80 p-3.5 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-bold text-white">River City Police</span>
+                    <span id="codeTagRCPD" class="font-mono text-slate-400 text-[10px] font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-950 flex items-center gap-1">
+                      <svg class="w-2.5 h-2.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                      <span class="cadCodeMask">BADGE PIN</span>
+                    </span>
+                  </div>
+                  <span class="text-[11px] text-slate-400">City districts, high-risk calls &bull; Code issued in Discord</span>
+                </div>
+
+                <!-- LSFR -->
+                <div class="bg-[#091e12] border border-emerald-900/80 p-3.5 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-bold text-white">State Fire Rescue</span>
+                    <span id="codeTagLSFR" class="font-mono text-slate-400 text-[10px] font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-950 flex items-center gap-1">
+                      <svg class="w-2.5 h-2.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                      <span class="cadCodeMask">BADGE PIN</span>
+                    </span>
+                  </div>
+                  <span class="text-[11px] text-slate-400">Paramedics, trauma, fire response &bull; Code issued in Discord</span>
+                </div>
+
+                <!-- DOT -->
+                <div class="bg-[#091e12] border border-emerald-900/80 p-3.5 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <span class="font-bold text-white">Department of Transport</span>
+                    <span id="codeTagDOT" class="font-mono text-slate-400 text-[10px] font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-950 flex items-center gap-1">
+                      <svg class="w-2.5 h-2.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                      <span class="cadCodeMask">BADGE PIN</span>
+                    </span>
+                  </div>
+                  <span class="text-[11px] text-slate-400">Road clearing, towing, traffic &bull; Code issued in Discord</span>
+                </div>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div onclick="siteCadFillCode('LCSO-991')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-white">Liberty County Sheriff</span>
-                  <code class="font-mono text-emerald-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-800">LCSO-991</code>
-                </div>
-                <span class="text-[11px] text-slate-400">County patrol, highway, warrants</span>
-              </div>
-
-              <div onclick="siteCadFillCode('RCPD-204')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-white">River City Police</span>
-                  <code class="font-mono text-blue-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-blue-900">RCPD-204</code>
-                </div>
-                <span class="text-[11px] text-slate-400">City districts, high-risk calls</span>
-              </div>
-
-              <div onclick="siteCadFillCode('LSFR-410')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-white">State Fire Rescue</span>
-                  <code class="font-mono text-rose-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-rose-900">LSFR-410</code>
-                </div>
-                <span class="text-[11px] text-slate-400">Paramedics, trauma, fire response</span>
-              </div>
-
-              <div onclick="siteCadFillCode('DOT-880')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-white">Department of Transport</span>
-                  <code class="font-mono text-amber-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-amber-900">DOT-880</code>
-                </div>
-                <span class="text-[11px] text-slate-400">Road clearing, towing, traffic safety</span>
-              </div>
-
-              <div onclick="siteCadFillCode('CIV-100')" class="cursor-pointer sm:col-span-2 bg-[#091e12] border border-emerald-600/80 hover:border-emerald-400 p-3.5 rounded-xl transition-all">
-                <div class="flex justify-between items-center mb-1">
-                  <span class="font-bold text-emerald-300">Civilian Operations Bureau</span>
-                  <code class="font-mono text-emerald-200 font-bold bg-[#040d07] px-2.5 py-0.5 rounded border border-emerald-500">CIV-100</code>
-                </div>
-                <span class="text-[11px] text-slate-300">Create RP personas, register vehicles, transmit live 911 calls to dispatch</span>
-              </div>
+            <!-- Command Supervisor Unlock -->
+            <div class="mt-4 pt-3 border-t border-emerald-900/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
+              <span class="text-[11px] text-slate-400">
+                Department codes are confidential to maintain server realism &amp; security.
+              </span>
+              <button 
+                onclick="siteCadToggleSupervisor()"
+                id="cadSupervisorBtn"
+                class="text-[11px] text-emerald-400 hover:text-emerald-300 font-bold underline flex items-center gap-1"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                <span>Command Staff / Supervisor Key</span>
+              </button>
             </div>
           </div>
         </div>
@@ -922,10 +983,34 @@
     let currentCadDept = null;
     let cadShiftSecs = 14 * 60 + 32;
     let cadTimer = null;
+    let supervisorUnlocked = false;
 
-    function siteCadFillCode(code) {
-      document.getElementById('siteCadCodeInput').value = code;
+    function siteCadCivilianLogin() {
+      document.getElementById('siteCadCodeInput').value = 'CIV-100';
       siteCadLogin();
+    }
+
+    function siteCadToggleSupervisor() {
+      if (supervisorUnlocked) {
+        supervisorUnlocked = false;
+        const masks = document.querySelectorAll('.cadCodeMask');
+        masks.forEach(el => el.innerText = 'BADGE PIN');
+        document.getElementById('cadSupervisorBtn').innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg><span>Command Staff / Supervisor Key</span>';
+        alert('Supervisor view locked. Codes are now concealed.');
+        return;
+      }
+      const pin = prompt('Enter Sentinel Command / Staff Passcode to view confidential codes:');
+      if (pin === 'S1RP09' || pin === 's1rp09') {
+        supervisorUnlocked = true;
+        document.querySelector('#codeTagLCSO .cadCodeMask').innerText = 'LCSO-991';
+        document.querySelector('#codeTagRCPD .cadCodeMask').innerText = 'RCPD-204';
+        document.querySelector('#codeTagLSFR .cadCodeMask').innerText = 'LSFR-410';
+        document.querySelector('#codeTagDOT .cadCodeMask').innerText = 'DOT-880';
+        document.getElementById('cadSupervisorBtn').innerHTML = '<span class="text-amber-400 font-bold">🔒 Command Unlocked &bull; Click to Hide Codes</span>';
+        alert('Command authorization verified. Displaying confidential department codes for supervisor reference.');
+      } else if (pin !== null) {
+        alert('Unauthorized access. Command passcode invalid.');
+      }
     }
 
     function siteCadLogin() {
