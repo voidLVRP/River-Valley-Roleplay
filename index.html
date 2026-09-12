@@ -1,36 +1,65 @@
-<html lang="en" class="scroll-smooth"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sentinel Roleplay | Official Emergency Response Community</title>
-  <meta name="description" content="Premier Semi-Serious Emergency Response Community in Liberty County - Official website for Sentinel Roleplay.">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liberty State Roleplay | Official Emergency Response Community</title>
+  <meta name="description" content="Premier Semi-Serious Emergency Response Community on Roblox - Official website for Sentinel Roleplay in Emergency Response: Liberty County on Roblox." />
   
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Sentinel Roleplay - ER:LC Roblox Community">
-  <meta property="og:description" content="Premier Semi-Serious Emergency Response Community in Liberty County. Join with code SENTINEL-RP.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sentinelroleplay.com">
-  <meta property="og:image" content="banner.png">
+  <meta property="og:title" content="Liberty State Roleplay - ER:LC Roblox Community" />
+  <meta property="og:description" content="Premier Semi-Serious Emergency Response Community on Roblox" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://libertystaterp.com" />
+  <meta property="og:image" content="banner.png" />
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              950: '#061209',
+              900: '#091a0e',
+              850: '#0b2012',
+              800: '#0f2a18',
+              700: '#163f25',
+              600: '#1e5934',
+              500: '#277a46',
+            },
+            sentinel: {
+              leaf: '#84cc16',
+              emerald: '#10b981',
+              bright: '#22c55e',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .bg-radial-gradient {
       background: radial-gradient(circle at top, rgba(16, 185, 129, 0.12) 0%, rgba(6, 18, 9, 1) 70%);
     }
+    .staff-badge-pulse {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+    }
   </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-6{bottom:1.5rem}.left-6{left:1.5rem}.right-6{right:1.5rem}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:0.125rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-\[280px\]{height:280px}.h-full{height:100%}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-1\.5{width:0.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-700\/60{border-color:rgb(180 83 9 / 0.6)}.border-blue-700\/60{border-color:rgb(29 78 216 / 0.6)}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.border-emerald-400\/40{border-color:rgb(52 211 153 / 0.4)}.border-emerald-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-emerald-600\/40{border-color:rgb(5 150 105 / 0.4)}.border-emerald-600\/50{border-color:rgb(5 150 105 / 0.5)}.border-emerald-600\/60{border-color:rgb(5 150 105 / 0.6)}.border-emerald-700\/60{border-color:rgb(4 120 87 / 0.6)}.border-emerald-700\/80{border-color:rgb(4 120 87 / 0.8)}.border-emerald-800\/40{border-color:rgb(6 95 70 / 0.4)}.border-emerald-800\/60{border-color:rgb(6 95 70 / 0.6)}.border-emerald-800\/80{border-color:rgb(6 95 70 / 0.8)}.border-emerald-900{--tw-border-opacity:1;border-color:rgb(6 78 59 / var(--tw-border-opacity, 1))}.border-emerald-900\/40{border-color:rgb(6 78 59 / 0.4)}.border-emerald-900\/50{border-color:rgb(6 78 59 / 0.5)}.border-emerald-900\/60{border-color:rgb(6 78 59 / 0.6)}.border-emerald-900\/80{border-color:rgb(6 78 59 / 0.8)}.border-orange-700\/60{border-color:rgb(194 65 12 / 0.6)}.border-red-700\/60{border-color:rgb(185 28 28 / 0.6)}.border-slate-700\/80{border-color:rgb(51 65 85 / 0.8)}.bg-\[\#051007\]{--tw-bg-opacity:1;background-color:rgb(5 16 7 / var(--tw-bg-opacity, 1))}.bg-\[\#061209\]{--tw-bg-opacity:1;background-color:rgb(6 18 9 / var(--tw-bg-opacity, 1))}.bg-\[\#07150c\]\/90{background-color:rgb(7 21 12 / 0.9)}.bg-\[\#07160c\]\/50{background-color:rgb(7 22 12 / 0.5)}.bg-\[\#08180e\]{--tw-bg-opacity:1;background-color:rgb(8 24 14 / var(--tw-bg-opacity, 1))}.bg-\[\#08180e\]\/90{background-color:rgb(8 24 14 / 0.9)}.bg-\[\#081b10\]{--tw-bg-opacity:1;background-color:rgb(8 27 16 / var(--tw-bg-opacity, 1))}.bg-\[\#0a1e12\]\/90{background-color:rgb(10 30 18 / 0.9)}.bg-\[\#0b1c11\]\/80{background-color:rgb(11 28 17 / 0.8)}.bg-\[\#0c2014\]{--tw-bg-opacity:1;background-color:rgb(12 32 20 / var(--tw-bg-opacity, 1))}.bg-\[\#0c2014\]\/70{background-color:rgb(12 32 20 / 0.7)}.bg-\[\#0c2014\]\/90{background-color:rgb(12 32 20 / 0.9)}.bg-\[\#0c2214\]{--tw-bg-opacity:1;background-color:rgb(12 34 20 / var(--tw-bg-opacity, 1))}.bg-amber-950\/80{background-color:rgb(69 26 3 / 0.8)}.bg-black\/85{background-color:rgb(0 0 0 / 0.85)}.bg-blue-950\/80{background-color:rgb(23 37 84 / 0.8)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-emerald-900{--tw-bg-opacity:1;background-color:rgb(6 78 59 / var(--tw-bg-opacity, 1))}.bg-emerald-900\/80{background-color:rgb(6 78 59 / 0.8)}.bg-emerald-950{--tw-bg-opacity:1;background-color:rgb(2 44 34 / var(--tw-bg-opacity, 1))}.bg-emerald-950\/40{background-color:rgb(2 44 34 / 0.4)}.bg-emerald-950\/80{background-color:rgb(2 44 34 / 0.8)}.bg-orange-950\/80{background-color:rgb(67 20 7 / 0.8)}.bg-red-950\/80{background-color:rgb(69 10 10 / 0.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-\[\#061209\]{--tw-gradient-from:#061209 var(--tw-gradient-from-position);--tw-gradient-to:rgb(6 18 9 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-600{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emerald-950{--tw-gradient-from:#022c22 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 44 34 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-\[\#0d2a17\]{--tw-gradient-to:rgb(13 42 23 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0d2a17 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-emerald-500{--tw-gradient-to:#10b981 var(--tw-gradient-to-position)}.to-emerald-800{--tw-gradient-to:#065f46 var(--tw-gradient-to-position)}.to-emerald-900{--tw-gradient-to:#064e3b var(--tw-gradient-to-position)}.to-emerald-950{--tw-gradient-to:#022c22 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-cover{object-fit:cover}.object-center{object-position:center}.p-0\.5{padding:0.125rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-20{padding-bottom:5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pt-10{padding-top:2.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-\[0\.25em\]{letter-spacing:0.25em}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-400\/90{color:rgb(52 211 153 / 0.9)}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-lime-400{--tw-text-opacity:1;color:rgb(163 230 53 / var(--tw-text-opacity, 1))}.text-orange-300{--tw-text-opacity:1;color:rgb(253 186 116 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-90{opacity:0.9}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-950\/60{--tw-shadow-color:rgb(2 44 34 / 0.6);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-950\/80{--tw-shadow-color:rgb(2 44 34 / 0.8);--tw-shadow:var(--tw-shadow-colored)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-700{transition-duration:700ms}.selection\:bg-emerald-600 *::selection{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-emerald-600::selection{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:border-emerald-500\/60:hover{border-color:rgb(16 185 129 / 0.6)}.hover\:bg-\[\#11301d\]:hover{--tw-bg-opacity:1;background-color:rgb(17 48 29 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#11301e\]:hover{--tw-bg-opacity:1;background-color:rgb(17 48 30 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-900\/90:hover{background-color:rgb(6 78 59 / 0.9)}.hover\:bg-emerald-950:hover{--tw-bg-opacity:1;background-color:rgb(2 44 34 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:from-emerald-500:hover{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-emerald-400:hover{--tw-gradient-to:#34d399 var(--tw-gradient-to-position)}.hover\:text-emerald-200:hover{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.hover\:text-emerald-300:hover{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.hover\:text-emerald-400:hover{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:h-20{height:5rem}.sm\:h-\[380px\]{height:380px}.sm\:w-20{width:5rem}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-end{align-items:flex-end}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:h-\[420px\]{height:420px}.lg\:pb-24{padding-bottom:6rem}.lg\:pt-14{padding-top:3.5rem}}</style></head>
+</head>
 <body class="bg-[#061209] text-slate-100 min-h-screen selection:bg-emerald-600 selection:text-white antialiased">
 
   <!-- Top Announcement Bar -->
   <div class="bg-gradient-to-r from-emerald-950 via-[#0d2a17] to-emerald-950 border-b border-emerald-800/40 py-2 px-4 text-center text-xs font-semibold text-emerald-300">
     <span class="inline-flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      Welcome to Sentinel Roleplay • Daily Scheduled Server Shifts • Join with code:
-      <code class="px-2 py-0.5 rounded bg-emerald-900/80 text-white font-mono font-bold" id="topAnnouncementCode">SENTINEL-RP</code>
+      Welcome to Sentinel Roleplay &bull; Daily Scheduled Server Shifts &bull; Join with code:
+      <code class="px-2 py-0.5 rounded bg-emerald-900/80 text-white font-mono font-bold" id="topAnnouncementCode">LSRP-2026</code>
     </span>
   </div>
 
@@ -43,17 +72,17 @@
         <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-800 p-0.5 shadow-lg shadow-emerald-950/60 group-hover:scale-105 transition-transform">
           <div class="w-full h-full rounded-full bg-[#08180e] flex items-center justify-center p-1.5 overflow-hidden">
             <svg viewBox="0 0 100 100" class="w-full h-full text-emerald-400 fill-current">
-              <circle cx="50" cy="30" r="16" fill="#f0fdf4" opacity="0.9"></circle>
-              <polygon points="50,15 15,70 85,70" fill="#047857"></polygon>
-              <polygon points="50,22 28,70 72,70" fill="#10b981"></polygon>
-              <polygon points="40,55 35,75 45,75" fill="#064e3b"></polygon>
-              <polygon points="60,55 55,75 65,75" fill="#064e3b"></polygon>
-              <path d="M50 86 C40 76 60 76 50 86" stroke="#84cc16" stroke-width="3" fill="none"></path>
+              <circle cx="50" cy="30" r="16" fill="#f0fdf4" opacity="0.9" />
+              <polygon points="50,15 15,70 85,70" fill="#047857" />
+              <polygon points="50,22 28,70 72,70" fill="#10b981" />
+              <polygon points="40,55 35,75 45,75" fill="#064e3b" />
+              <polygon points="60,55 55,75 65,75" fill="#064e3b" />
+              <path d="M50 86 C40 76 60 76 50 86" stroke="#84cc16" stroke-width="3" fill="none" />
             </svg>
           </div>
         </div>
         <div>
-          <span class="font-black text-white text-lg tracking-wider block uppercase leading-none" id="navServerName">SENTINEL</span>
+          <span class="font-black text-white text-lg tracking-wider block uppercase leading-none" id="navServerName">Liberty State Roleplay</span>
           <span class="text-[10px] tracking-[0.25em] text-emerald-400 font-bold uppercase block mt-0.5">ROLEPLAY</span>
         </div>
       </a>
@@ -61,6 +90,10 @@
       <!-- Navigation Links -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-300">
         <a href="#about" class="hover:text-emerald-400 transition-colors">Overview</a>
+        <a href="#cad-portal" class="hover:text-emerald-400 text-emerald-400 font-bold transition-colors flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          CAD / MDT
+        </a>
         <a href="#departments" class="hover:text-emerald-400 transition-colors">Agencies</a>
         <a href="#rules" class="hover:text-emerald-400 transition-colors">Server Rules</a>
         <a href="#staff" class="hover:text-emerald-400 transition-colors">Staff Team</a>
@@ -68,13 +101,20 @@
 
       <!-- Quick Action Buttons -->
       <div class="flex items-center gap-3">
-        <!-- Staff Portal Quick Access Button -->
+        <!-- CAD Quick Button -->
+        <a href="#cad-portal" class="hidden sm:flex px-3 py-2 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-sm items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+          <span>Open CAD</span>
+        </a>
+
+        <!-- Staff Portal Quick Button -->
         <button onclick="openStaffModal()" class="px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-emerald-950 text-slate-300 hover:text-emerald-300 border border-slate-700/80 hover:border-emerald-500/60 text-xs font-bold transition-all shadow-sm flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           <span>Staff Login</span>
         </button>
 
-        <a id="navDiscordBtn" href="https://discord.gg/sentinelrp" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-[#0c2214] hover:bg-[#11301d] text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-sm items-center gap-1.5">
+        <a id="navDiscordBtn" href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-[#0c2214] hover:bg-[#11301d] text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-sm items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
           <span>Discord</span>
         </a>
         <a id="navJoinBtn" href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-xs font-bold shadow-lg shadow-emerald-950/80 transition-all">
@@ -88,23 +128,29 @@
   <section id="about" class="relative overflow-hidden pt-10 pb-20 lg:pt-14 lg:pb-24 border-b border-emerald-900/40 bg-radial-gradient">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
-      <!-- Visual Banner Card -->
+      <!-- Visual Banner Card (displays uploaded banner.png) -->
       <div class="mb-10 relative rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl shadow-emerald-950/80 group">
-        <img id="heroBannerImg" src="banner.png" alt="Sentinel Roleplay Server Banner" class="w-full h-[280px] sm:h-[380px] lg:h-[420px] object-cover object-center group-hover:scale-[1.01] transition-transform duration-700" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511497584788-87676104235f?q=80&amp;w=1600&amp;auto=format&amp;fit=crop';">
+        <img 
+          id="heroBannerImg"
+          src="banner.png" 
+          alt="Sentinel Roleplay Server Banner" 
+          class="w-full h-[280px] sm:h-[380px] lg:h-[420px] object-cover object-center group-hover:scale-[1.01] transition-transform duration-700"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511497584788-87676104235f?q=80&w=1600&auto=format&fit=crop';"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-[#061209] via-transparent to-transparent opacity-90"></div>
         <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#08180e]/90 border-2 border-emerald-400 p-2 shadow-xl backdrop-blur flex items-center justify-center">
               <svg viewBox="0 0 100 100" class="w-full h-full text-emerald-400 fill-current">
-                <circle cx="50" cy="30" r="16" fill="#f0fdf4" opacity="0.9"></circle>
-                <polygon points="50,15 15,70 85,70" fill="#047857"></polygon>
-                <polygon points="50,22 28,70 72,70" fill="#10b981"></polygon>
-                <path d="M50 86 C40 76 60 76 50 86" stroke="#84cc16" stroke-width="3" fill="none"></path>
+                <circle cx="50" cy="30" r="16" fill="#f0fdf4" opacity="0.9" />
+                <polygon points="50,15 15,70 85,70" fill="#047857" />
+                <polygon points="50,22 28,70 72,70" fill="#10b981" />
+                <path d="M50 86 C40 76 60 76 50 86" stroke="#84cc16" stroke-width="3" fill="none" />
               </svg>
             </div>
             <div>
               <span class="text-xs uppercase tracking-widest font-black text-emerald-400">Emergency Response: Liberty County</span>
-              <h1 id="heroServerName" class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight">SENTINEL ROLEPLAY</h1>
+              <h1 id="heroServerName" class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight">Liberty State Roleplay</h1>
             </div>
           </div>
 
@@ -119,15 +165,20 @@
 
       <!-- Hero Header & Tagline -->
       <div class="text-center max-w-3xl mx-auto">
-        <p id="heroTagline" class="text-lg sm:text-xl text-slate-300 leading-relaxed font-medium mb-8">Premier Semi-Serious Emergency Response Community in Liberty County. Experience rural county beats, high-speed highway interdiction, and structured emergency response roleplay.</p>
+        <p id="heroTagline" class="text-lg sm:text-xl text-slate-300 leading-relaxed font-medium mb-8">
+          Premier Semi-Serious Emergency Response Community on Roblox
+        </p>
 
         <!-- In-Game Private Server Code Box -->
         <div class="max-w-md mx-auto bg-[#0a1e12]/90 border border-emerald-500/40 rounded-2xl p-5 shadow-xl shadow-emerald-950/80 mb-8 backdrop-blur">
           <div class="text-[11px] uppercase tracking-wider font-extrabold text-emerald-400 mb-2 flex items-center justify-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
             ER:LC Private Server Join Code
           </div>
           <div class="flex items-center justify-between bg-[#061209] border border-emerald-800/60 rounded-xl px-4 py-2.5">
-            <code id="joinCodeText" class="font-mono text-2xl font-black text-emerald-300 tracking-wider">SENTINEL-RP</code>
+            <code id="joinCodeText" class="font-mono text-2xl font-black text-emerald-300 tracking-wider">
+              LSRP-2026
+            </code>
             <button onclick="copyServerCode()" id="copyBtn" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-1">
               <span>Copy Code</span>
             </button>
@@ -138,79 +189,342 @@
         <div class="flex flex-wrap items-center justify-center gap-3.5">
           <a id="heroJoinBtn" href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-xl shadow-emerald-950/80 transition-all flex items-center gap-2">
             <span>Launch Game in Roblox</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
-          <a id="heroDiscordBtn" href="https://discord.gg/sentinelrp" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-white font-bold text-sm transition-all flex items-center gap-2">
+          <a id="heroDiscordBtn" href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-white font-bold text-sm transition-all flex items-center gap-2">
             <span>Join Community Discord</span>
           </a>
-          <a id="heroCadBtn" href="https://sonorancad.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-emerald-300 font-bold text-sm transition-all flex items-center gap-2">
-            <span>CAD / MDT Database</span>
+          <a id="heroCadBtn" href="#cad-portal" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-950 to-slate-900 hover:bg-emerald-900 border border-emerald-500/80 text-emerald-300 font-bold text-sm transition-all shadow-lg shadow-emerald-950/60 flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            <span>CAD / MDT Terminal</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Departments Section (LCSO, RCPD, LSFR, LSDOT) -->
+  <!-- Interactive CAD / MDT Section -->
+  <section id="cad-portal" class="py-20 border-b border-emerald-900/40 bg-[#06140b]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-emerald-900/60">
+        <div>
+          <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Live Tactical Dispatch &amp; Records
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">CAD / MDT Workstation</h2>
+          <p class="text-slate-300 text-sm mt-2 max-w-xl">
+            Integrated Police MDT, Fire Rescue 911 dispatch, DOT dispatch, and Civilian Persona database with department join codes.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1 rounded-xl bg-emerald-950/80 border border-emerald-700/60 text-xs font-mono font-bold text-emerald-300">
+            System v2.4 Online
+          </span>
+        </div>
+      </div>
+
+      <!-- CAD Interactive Terminal Box -->
+      <div class="bg-[#091f11] border border-emerald-600/50 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-emerald-950/80">
+        
+        <!-- Top Terminal Bar -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-emerald-900/80">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-900/60 border border-emerald-500/60 flex items-center justify-center text-emerald-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            </div>
+            <div>
+              <div class="text-base font-bold text-white flex items-center gap-2">
+                <span>Department CAD Access</span>
+                <span id="cadStatusBadge" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 uppercase">
+                  Ready to Authenticate
+                </span>
+              </div>
+              <p class="text-xs text-slate-400">Join with official department code or submit civilian call</p>
+            </div>
+          </div>
+
+          <div id="cadActiveDeptBadge" class="hidden items-center gap-2 bg-[#061209] px-4 py-2 rounded-xl border border-emerald-800 text-xs text-emerald-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span id="cadActiveDeptName" class="font-bold">LCSO</span>
+            <button onclick="siteCadLeaveDept()" class="text-slate-400 hover:text-red-400 ml-2 pl-2 border-l border-emerald-900 underline text-xs">Switch</button>
+          </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div id="cadLoginGateway" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-1 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6">
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-2 text-emerald-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+              <span>Join Workstation</span>
+            </h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Enter the authorized department join code to open your agency's Mobile Data Terminal or Civilian Bureau.
+            </p>
+
+            <div class="space-y-3">
+              <input 
+                type="text" 
+                id="siteCadCodeInput" 
+                placeholder="E.G. LCSO-991, CIV-100" 
+                onkeydown="if(event.key==='Enter') siteCadLogin()"
+                class="w-full bg-[#030905] border border-emerald-800 rounded-xl px-4 py-3 text-center text-sm font-mono font-black tracking-widest text-emerald-300 focus:outline-none focus:border-emerald-400 uppercase"
+              />
+              <div id="siteCadError" class="text-xs text-red-400 font-semibold hidden">Invalid join code. See department codes on right.</div>
+              <button 
+                onclick="siteCadLogin()"
+                class="w-full py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/80 transition-all uppercase tracking-wider"
+              >
+                Authenticate Terminal
+              </button>
+            </div>
+          </div>
+
+          <!-- Codes Reference Table -->
+          <div class="lg:col-span-2 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6">
+            <div class="text-xs uppercase font-bold text-slate-300 mb-3 flex items-center justify-between">
+              <span>Department Join Roster &amp; Codes</span>
+              <span class="text-[11px] text-emerald-400 font-mono">5 Agencies Active</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div onclick="siteCadFillCode('LCSO-991')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-bold text-white">Liberty County Sheriff</span>
+                  <code class="font-mono text-emerald-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-emerald-800">LCSO-991</code>
+                </div>
+                <span class="text-[11px] text-slate-400">County patrol, highway, warrants</span>
+              </div>
+
+              <div onclick="siteCadFillCode('RCPD-204')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-bold text-white">River City Police</span>
+                  <code class="font-mono text-blue-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-blue-900">RCPD-204</code>
+                </div>
+                <span class="text-[11px] text-slate-400">City districts, high-risk calls</span>
+              </div>
+
+              <div onclick="siteCadFillCode('LSFR-410')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-bold text-white">State Fire Rescue</span>
+                  <code class="font-mono text-rose-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-rose-900">LSFR-410</code>
+                </div>
+                <span class="text-[11px] text-slate-400">Paramedics, trauma, fire response</span>
+              </div>
+
+              <div onclick="siteCadFillCode('DOT-880')" class="cursor-pointer bg-[#091e12] border border-emerald-800/80 hover:border-emerald-500 p-3.5 rounded-xl transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-bold text-white">Department of Transport</span>
+                  <code class="font-mono text-amber-300 font-bold bg-[#040d07] px-2 py-0.5 rounded border border-amber-900">DOT-880</code>
+                </div>
+                <span class="text-[11px] text-slate-400">Road clearing, towing, traffic safety</span>
+              </div>
+
+              <div onclick="siteCadFillCode('CIV-100')" class="cursor-pointer sm:col-span-2 bg-[#091e12] border border-emerald-600/80 hover:border-emerald-400 p-3.5 rounded-xl transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="font-bold text-emerald-300">Civilian Operations Bureau</span>
+                  <code class="font-mono text-emerald-200 font-bold bg-[#040d07] px-2.5 py-0.5 rounded border border-emerald-500">CIV-100</code>
+                </div>
+                <span class="text-[11px] text-slate-300">Create RP personas, register vehicles, transmit live 911 calls to dispatch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Active Workspace Screen -->
+        <div id="cadActiveWorkspace" class="hidden space-y-6">
+          <!-- Department Header & Unit Info -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#06130a] border border-emerald-800 p-4 rounded-2xl gap-3">
+            <div>
+              <div class="text-sm font-bold text-white" id="cadUnitCallsign">Unit 204 - Patrol</div>
+              <div class="text-xs text-emerald-400/90 font-medium" id="cadUnitDept">Liberty County Sheriff's Office</div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-bold text-slate-300 bg-[#030905] px-3 py-1.5 rounded-lg border border-emerald-900" id="cadClockDisplay">
+                Shift: 00:14:32
+              </span>
+              <button onclick="siteCadToggleClock()" id="cadClockBtn" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg transition-all">
+                10-8 Clock Out
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick 10-Codes Status -->
+          <div class="space-y-2">
+            <span class="text-xs font-bold text-slate-300 uppercase tracking-wider block">Set Radio Status</span>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+              <button onclick="siteCadSetStatus('10-8')" class="p-2.5 bg-emerald-950/80 border border-emerald-700 hover:border-emerald-400 text-emerald-300 font-bold rounded-xl text-center">
+                10-8 Available
+              </button>
+              <button onclick="siteCadSetStatus('10-6')" class="p-2.5 bg-amber-950/80 border border-amber-700 hover:border-amber-400 text-amber-300 font-bold rounded-xl text-center">
+                10-6 Traffic Stop
+              </button>
+              <button onclick="siteCadSetStatus('10-23')" class="p-2.5 bg-blue-950/80 border border-blue-700 hover:border-blue-400 text-blue-300 font-bold rounded-xl text-center">
+                10-23 En Route
+              </button>
+              <button onclick="siteCadSetStatus('10-97')" class="p-2.5 bg-purple-950/80 border border-purple-700 hover:border-purple-400 text-purple-300 font-bold rounded-xl text-center">
+                10-97 On Scene
+              </button>
+              <button onclick="siteCadSetStatus('10-99')" class="p-2.5 bg-red-950/80 border border-red-700 hover:border-red-400 text-red-300 font-bold rounded-xl text-center animate-pulse">
+                10-99 Panic
+              </button>
+            </div>
+          </div>
+
+          <!-- Lookups & Dispatch Feed -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Active 911 Dispatches -->
+            <div class="bg-[#06130a] border border-emerald-900 rounded-2xl p-5 space-y-3">
+              <div class="flex justify-between items-center border-b border-emerald-950 pb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Live 911 Dispatches</span>
+                <span class="text-[10px] bg-red-950 border border-red-800 text-red-300 px-2 py-0.5 rounded font-bold animate-pulse">Priority Board</span>
+              </div>
+              <div class="space-y-2 text-xs" id="cadDispatchesList">
+                <div class="p-3 bg-[#081d0f] border border-emerald-800/80 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <strong class="text-white">Bank Alarm Activated</strong>
+                    <span class="text-red-400 font-bold font-mono">Code 3</span>
+                  </div>
+                  <div class="text-slate-300 text-[11px]">Location: River City Financial &bull; Caller: Silent Alarm</div>
+                </div>
+                <div class="p-3 bg-[#081d0f] border border-emerald-800/80 rounded-xl">
+                  <div class="flex justify-between items-center mb-1">
+                    <strong class="text-white">Reckless Speeding Black Mustang</strong>
+                    <span class="text-amber-400 font-bold font-mono">Code 2</span>
+                  </div>
+                  <div class="text-slate-300 text-[11px]">Location: Highway 58 Northbound &bull; Caller: Marcus Vance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Citizen / Plate Lookup -->
+            <div class="bg-[#06130a] border border-emerald-900 rounded-2xl p-5 space-y-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block border-b border-emerald-950 pb-2">
+                DMV &amp; Warrant Database Lookup
+              </span>
+              <div class="flex gap-2">
+                <input 
+                  type="text" 
+                  id="cadSearchInput" 
+                  placeholder="Enter name or plate (e.g. Marcus or SENT-881)" 
+                  class="w-full bg-[#030905] border border-emerald-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-400 font-mono"
+                />
+                <button onclick="siteCadSearch()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-all">
+                  Search
+                </button>
+              </div>
+              <div id="cadSearchResultBox" class="p-3 bg-[#081d0f] border border-emerald-800/80 rounded-xl text-xs text-slate-300 min-h-[60px] flex items-center">
+                Search civilian names or license plates in the Sentinel database.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
   <section id="departments" class="py-20 border-b border-emerald-900/40 bg-[#07160c]/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-2 block">Agencies &amp; Operations</span>
+        <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-2 block">Agencies & Operations</span>
         <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Public Safety Departments</h2>
-        <p class="text-slate-300 text-sm mt-3">Apply to represent one of Liberty County's premier public safety and emergency service divisions.</p>
+        <p class="text-slate-300 text-sm mt-3">Apply to represent one of Sentinel's emergency response divisions or run your private enterprise.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" id="departmentsContainer">
-        <!-- LCSO -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
+        
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg shadow-emerald-950/20">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-amber-950/80 text-amber-300 border border-amber-700/60 uppercase">LCSO</span>
-            <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 uppercase" data-field="dept-short-lcso">
+              LCSO
+            </span>
+            <span class="text-[11px] font-medium text-emerald-400/90 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+              Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty County Sheriff's Office</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6">Enforcing countywide peace, rural patrols, mountain interdiction, high-speed pursuit management, and warrant operations.</p>
-          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord →</a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors" data-field="dept-name-lcso">
+            Liberty County Sheriff's Office
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal" data-field="dept-desc-lcso">
+            Enforcing countywide peace, rural patrols, mountain interdiction, high-speed pursuit management, and warrant operations.
+          </p>
+          <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2 transition-colors">
+            Apply Through Discord
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
         </div>
-
-        <!-- RCPD -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
+      
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg shadow-emerald-950/20">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-blue-950/80 text-blue-300 border border-blue-700/60 uppercase">RCPD</span>
-            <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 uppercase" data-field="dept-short-rcpd">
+              RCPD
+            </span>
+            <span class="text-[11px] font-medium text-emerald-400/90 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+              Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5">River City Police Department</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6">Protecting municipal districts, downtown commercial beats, traffic regulation, and rapid tactical emergency response.</p>
-          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord →</a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors" data-field="dept-name-rcpd">
+            River City Police Department
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal" data-field="dept-desc-rcpd">
+            Protecting municipal districts, downtown commercial beats, traffic regulation, and rapid tactical emergency response.
+          </p>
+          <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2 transition-colors">
+            Apply Through Discord
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
         </div>
-
-        <!-- LSFR -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
+      
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg shadow-emerald-950/20">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-red-950/80 text-red-300 border border-red-700/60 uppercase">LSFR</span>
-            <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 uppercase" data-field="dept-short-lsfr">
+              LSFR
+            </span>
+            <span class="text-[11px] font-medium text-emerald-400/90 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+              Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty State Fire Rescue</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6">Advanced life support paramedic response, structural fire suppression, vehicle extrication, and wilderness mountain search &amp; rescue.</p>
-          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord →</a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors" data-field="dept-name-lsfr">
+            Liberty State Fire Rescue
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal" data-field="dept-desc-lsfr">
+            Advanced life support paramedic response, structural fire suppression, vehicle extrication, and wilderness mountain search & rescue.
+          </p>
+          <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2 transition-colors">
+            Apply Through Discord
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
         </div>
-
-        <!-- LSDOT -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
+      
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg shadow-emerald-950/20">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-orange-950/80 text-orange-300 border border-orange-700/60 uppercase">LSDOT</span>
-            <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 uppercase" data-field="dept-short-lsdot">
+              LSDOT
+            </span>
+            <span class="text-[11px] font-medium text-emerald-400/90 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+              Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty State DOT</h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6">Highway incident management, mountain road weather safety, debris clearing, temporary lane closures, and heavy towing recovery.</p>
-          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord →</a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors" data-field="dept-name-lsdot">
+            Liberty State DOT
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal" data-field="dept-desc-lsdot">
+            Highway incident management, mountain road weather safety, debris clearing, temporary lane closures, and heavy towing recovery.
+          </p>
+          <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2 transition-colors">
+            Apply Through Discord
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
         </div>
+      
       </div>
     </div>
   </section>
@@ -219,23 +533,85 @@
   <section id="rules" class="py-20 border-b border-emerald-900/40">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-xl mx-auto mb-12">
-        <span class="text-xs uppercase tracking-[0.2em] font-black text-lime-400 mb-2 block">Standards &amp; Conduct</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Server Rules &amp; Guidelines</h2>
+        <span class="text-xs uppercase tracking-[0.2em] font-black text-lime-400 mb-2 block">Standards & Conduct</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Server Rules & Guidelines</h2>
+        <p class="text-slate-300 text-sm mt-3">Compliance with our community standards is mandatory for all citizens and officers.</p>
       </div>
 
-      <div class="space-y-3.5">
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">1. No Random Deathmatch (RDM)</h4>
-          <p class="text-sm text-slate-300">Do not harm or attack other players without prior verbal initiation and a clear, realistic motive.</p>
+      <div class="space-y-3.5" id="rulesContainer">
+        
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              1
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">No Random Deathmatch (RDM)</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">Do not harm or execute another player without a valid, pre-established roleplay interaction and proper initiation.</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">2. No Vehicle Deathmatch (VDM)</h4>
-          <p class="text-sm text-slate-300">Never deliberately ram vehicles into pedestrians or other cars without authorized pursuit maneuvers.</p>
+      
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              2
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">No Vehicle Deathmatch (VDM)</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">Never deliberately ram your vehicle into pedestrians or other vehicles without realistic high-speed pursuit PIT authorization.</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">3. Fear RP &amp; Value of Life</h4>
-          <p class="text-sm text-slate-300">Value your character's life. When held at gunpoint or significantly outnumbered, reasonably comply with demands.</p>
+      
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              3
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">Fear RP & Value of Life</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">You must value your character life. When outnumbered or held at gunpoint with no immediate escape, follow commands reasonably.</p>
+            </div>
+          </div>
         </div>
+      
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              4
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">New Life Rule (NLR)</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">Upon respawning after death, you forget the past events that led to your demise and cannot return to the scene for 15 minutes.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              5
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">Priority & Cooldown Times</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">Major crimes (Bank robbery, jewelry heist, hostage scenarios) require active Peace Officer supervisor presence and a 20-min cooldown.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5 hover:border-emerald-700/40 transition-colors">
+          <div class="flex items-start gap-3.5">
+            <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-700/50 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold mt-0.5">
+              6
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-white mb-1.5">No Fail RP / Unrealistic Driving</h4>
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">Supercars driving off-road over mountain cliffs or driving on shredded tires is strictly prohibited. Keep driving physics realistic.</p>
+            </div>
+          </div>
+        </div>
+      
       </div>
     </div>
   </section>
@@ -245,37 +621,60 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 pb-6 border-b border-emerald-900/60">
         <div>
-          <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-1 block">Staff Team &amp; Administration</span>
+          <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-1 block">Staff Team & Administration</span>
           <h2 class="text-3xl font-black text-white tracking-tight">Server Leadership</h2>
         </div>
         
         <!-- Staff Editor Login Trigger -->
         <button onclick="openStaffModal()" class="px-4 py-2 rounded-xl bg-emerald-950/80 hover:bg-emerald-900/90 text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-md flex items-center gap-2">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
           <span>Staff Editor Portal</span>
           <span class="text-[10px] bg-emerald-900 px-1.5 py-0.5 rounded text-emerald-200 border border-emerald-700/80">Passcode Protected</span>
         </button>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="staffMembersContainer">
+        
         <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
           <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
-            S
+            D
           </div>
           <div>
-            <div class="font-bold text-white text-sm">Server Founder</div>
-            <div class="text-xs text-emerald-400/90 font-medium">Community Owner</div>
+            <div class="font-bold text-white text-sm">Director Ethan</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Server Owner & Founder</div>
           </div>
         </div>
+      
         <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
           <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
-            H
+            D
           </div>
           <div>
-            <div class="font-bold text-white text-sm">Head of Staff</div>
-            <div class="text-xs text-emerald-400/90 font-medium">Executive Admin</div>
+            <div class="font-bold text-white text-sm">Deputy Director Jordan</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Head of Operations</div>
           </div>
         </div>
+      
+        <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
+            C
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Chief Marcus</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Law Enforcement Supervisor</div>
+          </div>
+        </div>
+      
+        <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
+            C
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Commander Sarah</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Staff Management Lead</div>
+          </div>
+        </div>
+      
       </div>
     </div>
   </section>
@@ -285,39 +684,42 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-4">
       <div class="flex items-center justify-center gap-2">
         <span class="font-extrabold text-white text-sm tracking-wider uppercase">SENTINEL ROLEPLAY</span>
-        <span class="text-emerald-500">•</span>
+        <span class="text-emerald-500">&bull;</span>
         <span class="text-slate-400">Official Server Portal</span>
-        <span class="text-emerald-500">•</span>
+        <span class="text-emerald-500">&bull;</span>
         <button onclick="openStaffModal()" class="text-emerald-400 hover:text-emerald-300 underline font-semibold">Staff Editor</button>
       </div>
       <p class="text-slate-400">
-        © 2026 Sentinel Roleplay. Operating on <strong>https://sentinelroleplay.com</strong>.
+        &copy; 2026 Sentinel Roleplay. All rights reserved. Operating on <strong>https://libertystaterp.com</strong>.
+      </p>
+      <p class="max-w-lg mx-auto text-[11px] text-slate-400">
+        Independent Roblox community. Not affiliated with, endorsed, or sponsored by Police Roleplay Community or Roblox Corporation.
       </p>
     </div>
   </footer>
 
   <!-- STAFF EDITOR MODAL (Password: S1RP09) -->
-  <div id="staffModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm items-center justify-center p-4 flex">
+  <div id="staffModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
     <div class="bg-[#081b10] border border-emerald-600/60 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 text-left">
       
       <!-- Modal Header -->
       <div class="flex items-center justify-between pb-4 border-b border-emerald-900/80">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-700/80 flex items-center justify-center text-emerald-400">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           </div>
           <div>
             <h3 class="text-lg font-black text-white">Staff Management Portal</h3>
-            <p class="text-xs text-emerald-400/90 font-medium">Sentinel Roleplay Staff Command &amp; Editor</p>
+            <p class="text-xs text-emerald-400/90 font-medium">Sentinel Roleplay Staff Command & Editor</p>
           </div>
         </div>
-        <button onclick="closeStaffModal()" class="w-8 h-8 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-lg">×</button>
+        <button onclick="closeStaffModal()" class="w-8 h-8 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-lg">&times;</button>
       </div>
 
       <!-- Password Lock Screen View -->
-      <div id="staffAuthScreen" class="py-8 text-center max-w-md mx-auto hidden">
+      <div id="staffAuthScreen" class="py-8 text-center max-w-md mx-auto">
         <div class="w-14 h-14 rounded-2xl bg-emerald-950/80 border border-emerald-600/50 flex items-center justify-center text-emerald-400 mx-auto mb-4">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
         <h4 class="text-base font-bold text-white mb-1.5">Enter Staff Passcode</h4>
         <p class="text-xs text-slate-300 mb-5 leading-relaxed">
@@ -325,16 +727,25 @@
         </p>
 
         <div class="space-y-3">
-          <input type="password" id="staffPasswordInput" placeholder="Enter Staff Password" onkeydown="if(event.key==='Enter') verifyStaffPassword()" class="w-full bg-[#061209] border border-emerald-800/80 rounded-xl px-4 py-2.5 text-center text-sm font-mono tracking-widest text-white focus:outline-none focus:border-emerald-500">
+          <input 
+            type="password" 
+            id="staffPasswordInput" 
+            placeholder="Enter Staff Password" 
+            onkeydown="if(event.key==='Enter') verifyStaffPassword()"
+            class="w-full bg-[#061209] border border-emerald-800/80 rounded-xl px-4 py-2.5 text-center text-sm font-mono tracking-widest text-white focus:outline-none focus:border-emerald-500"
+          />
           <div id="passwordError" class="text-xs text-red-400 font-semibold hidden">Incorrect password. Please try again.</div>
-          <button onclick="verifyStaffPassword()" class="w-full py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/80 transition-all">
+          <button 
+            onclick="verifyStaffPassword()" 
+            class="w-full py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/80 transition-all"
+          >
             Unlock Staff Editor
           </button>
         </div>
       </div>
 
       <!-- Staff Editor Screen View (Unlocked) -->
-      <div id="staffEditorScreen" class="py-4 space-y-6">
+      <div id="staffEditorScreen" class="py-4 hidden space-y-6">
         <div class="bg-emerald-950/40 border border-emerald-600/40 rounded-xl p-3 flex items-center justify-between text-xs">
           <span class="text-emerald-300 font-semibold flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -347,29 +758,29 @@
         <div class="space-y-4">
           <div>
             <label class="block text-xs font-bold text-slate-300 mb-1">In-Game Server Join Code</label>
-            <input type="text" id="editServerCode" value="SENTINEL-RP" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-emerald-300 font-mono font-bold focus:outline-none focus:border-emerald-500">
+            <input type="text" id="editServerCode" value="LSRP-2026" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-emerald-300 font-mono font-bold focus:outline-none focus:border-emerald-500" />
             <span class="text-[11px] text-slate-400">Updates the join code displayed in the announcement banner and hero box.</span>
           </div>
 
           <div>
             <label class="block text-xs font-bold text-slate-300 mb-1">Server Tagline / Mission</label>
-            <textarea id="editServerTagline" rows="2" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:border-emerald-500">Premier Semi-Serious Emergency Response Community in Liberty County. Experience rural county beats, high-speed highway interdiction, and structured emergency response roleplay.</textarea>
+            <textarea id="editServerTagline" rows="2" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:border-emerald-500">Premier Semi-Serious Emergency Response Community on Roblox</textarea>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block text-xs font-bold text-slate-300 mb-1">Discord Invite Link</label>
-              <input type="text" id="editDiscordUrl" value="https://discord.gg/your-server" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+              <input type="text" id="editDiscordUrl" value="https://discord.gg/your-server" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
             </div>
             <div>
               <label class="block text-xs font-bold text-slate-300 mb-1">Roblox Join Link</label>
-              <input type="text" id="editJoinUrl" value="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+              <input type="text" id="editJoinUrl" value="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
             </div>
           </div>
 
           <div>
             <label class="block text-xs font-bold text-slate-300 mb-1">CAD / MDT Database Link</label>
-            <input type="text" id="editCadUrl" value="https://sonorancad.com" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+            <input type="text" id="editCadUrl" value="https://sonorancad.com" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
           </div>
         </div>
 
@@ -486,6 +897,7 @@
     }
 
     function exportUpdatedIndexHtml() {
+      // Create a clean HTML download of the live page state
       const clone = document.documentElement.outerHTML;
       const blob = new Blob([clone], { type: 'text/html;charset=utf-8' });
       const url = URL.createObjectURL(blob);
@@ -497,7 +909,120 @@
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     }
+
+    // CAD Workstation Scripts
+    const CAD_CODES = {
+      'LCSO-991': { name: "Liberty County Sheriff's Office", short: "LCSO", type: "leo" },
+      'RCPD-204': { name: "River City Police Department", short: "RCPD", type: "leo" },
+      'LSFR-410': { name: "Liberty State Fire Rescue", short: "LSFR", type: "fire" },
+      'DOT-880': { name: "Liberty State DOT", short: "DOT", type: "dot" },
+      'CIV-100': { name: "Civilian Operations Bureau", short: "CIV", type: "civ" }
+    };
+
+    let currentCadDept = null;
+    let cadShiftSecs = 14 * 60 + 32;
+    let cadTimer = null;
+
+    function siteCadFillCode(code) {
+      document.getElementById('siteCadCodeInput').value = code;
+      siteCadLogin();
+    }
+
+    function siteCadLogin() {
+      const input = document.getElementById('siteCadCodeInput').value.trim().toUpperCase();
+      const err = document.getElementById('siteCadError');
+      if (CAD_CODES[input]) {
+        err.classList.add('hidden');
+        currentCadDept = CAD_CODES[input];
+        document.getElementById('cadLoginGateway').classList.add('hidden');
+        document.getElementById('cadActiveWorkspace').classList.remove('hidden');
+        document.getElementById('cadActiveDeptBadge').classList.remove('hidden');
+        document.getElementById('cadActiveDeptBadge').classList.add('flex');
+        document.getElementById('cadActiveDeptName').innerText = currentCadDept.short;
+        document.getElementById('cadUnitDept').innerText = currentCadDept.name;
+        document.getElementById('cadUnitCallsign').innerText = currentCadDept.short + '-' + Math.floor(100 + Math.random() * 899);
+        document.getElementById('cadStatusBadge').innerText = '10-8 IN SERVICE';
+        document.getElementById('cadStatusBadge').className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 uppercase';
+        
+        if (!cadTimer) {
+          cadTimer = setInterval(() => {
+            cadShiftSecs++;
+            const h = String(Math.floor(cadShiftSecs / 3600)).padStart(2, '0');
+            const m = String(Math.floor((cadShiftSecs % 3600) / 60)).padStart(2, '0');
+            const s = String(cadShiftSecs % 60).padStart(2, '0');
+            const disp = document.getElementById('cadClockDisplay');
+            if (disp) disp.innerText = 'Shift: ' + h + ':' + m + ':' + s;
+          }, 1000);
+        }
+      } else {
+        err.classList.remove('hidden');
+      }
+    }
+
+    function siteCadLeaveDept() {
+      currentCadDept = null;
+      document.getElementById('cadActiveWorkspace').classList.add('hidden');
+      document.getElementById('cadLoginGateway').classList.remove('hidden');
+      document.getElementById('cadActiveDeptBadge').classList.add('hidden');
+      document.getElementById('cadActiveDeptBadge').classList.remove('flex');
+      document.getElementById('cadStatusBadge').innerText = 'READY TO AUTHENTICATE';
+      document.getElementById('siteCadCodeInput').value = '';
+    }
+
+    function siteCadSetStatus(status) {
+      const badge = document.getElementById('cadStatusBadge');
+      if (status === '10-8') {
+        badge.innerText = '10-8 AVAILABLE';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 uppercase';
+      } else if (status === '10-6') {
+        badge.innerText = '10-6 BUSY (TRAFFIC STOP)';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800 uppercase';
+      } else if (status === '10-23') {
+        badge.innerText = '10-23 EN ROUTE';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 uppercase';
+      } else if (status === '10-97') {
+        badge.innerText = '10-97 ON SCENE';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800 uppercase';
+      } else if (status === '10-99') {
+        badge.innerText = '10-99 EMERGENCY PANIC';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-red-950 text-red-300 border border-red-800 uppercase animate-pulse';
+      }
+    }
+
+    function siteCadToggleClock() {
+      const btn = document.getElementById('cadClockBtn');
+      const badge = document.getElementById('cadStatusBadge');
+      if (btn.innerText.includes('Clock Out')) {
+        btn.innerText = '10-8 Clock In';
+        btn.className = 'px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-lg transition-all';
+        badge.innerText = '10-7 OFFLINE';
+        badge.className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-400 uppercase';
+      } else {
+        btn.innerText = '10-8 Clock Out';
+        btn.className = 'px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg transition-all';
+        siteCadSetStatus('10-8');
+      }
+    }
+
+    function siteCadSearch() {
+      const q = document.getElementById('cadSearchInput').value.trim().toLowerCase();
+      const res = document.getElementById('cadSearchResultBox');
+      if (!q) {
+        res.innerHTML = '<span class="text-slate-400">Please enter a name or plate to lookup.</span>';
+        return;
+      }
+      if (q.includes('marcus') || q.includes('vance')) {
+        res.innerHTML = '<div class="space-y-1 w-full"><div class="flex justify-between"><strong class="text-white">Marcus Vance (DOB: 11/14/1994)</strong><span class="text-emerald-400 font-bold">LICENSE: VALID</span></div><div class="text-[11px] text-slate-300">Warrants: None &bull; Weapons Permit: Concealed Carry (Active) &bull; Vehicles: 2 Registered</div></div>';
+      } else if (q.includes('elena') || q.includes('reyes')) {
+        res.innerHTML = '<div class="space-y-1 w-full"><div class="flex justify-between"><strong class="text-white">Elena Reyes (DOB: 05/22/1998)</strong><span class="text-emerald-400 font-bold">LICENSE: VALID</span></div><div class="text-[11px] text-slate-300">Warrants: None &bull; Weapons: Class 1 Handgun &bull; Plate: AMB-402 (EMS Transport)</div></div>';
+      } else if (q.includes('sent-881') || q.includes('881')) {
+        res.innerHTML = '<div class="space-y-1 w-full"><div class="flex justify-between"><strong class="text-white">Plate: SENT-881 (2023 Cheval Fugitive)</strong><span class="text-emerald-400 font-bold">REG: VALID</span></div><div class="text-[11px] text-slate-300">Owner: Marcus Vance &bull; Color: Midnight Black &bull; Insurance: Active State Farm</div></div>';
+      } else if (q.includes('outlaw') || q.includes('9')) {
+        res.innerHTML = '<div class="space-y-1 w-full"><div class="flex justify-between"><strong class="text-white">Plate: OUTLAW-9 (2020 Vapid Dominator)</strong><span class="text-amber-400 font-bold">REG: EXPIRED</span></div><div class="text-[11px] text-slate-300">Owner: Tyler Durant &bull; Color: Matte Grey &bull; Flag: Prior Evading Traffic Stop</div></div>';
+      } else {
+        res.innerHTML = '<div class="w-full text-center text-slate-400 py-1">No matching state records found for "' + q + '". Record clear.</div>';
+      }
+    }
   </script>
-
-
-</body></html>
+</body>
+</html>
