@@ -6,14 +6,14 @@
   <title>Sentinel Roleplay | Official Emergency Response Community</title>
   <meta name="description" content="Premier Semi-Serious Emergency Response Community in Liberty County - Official website for Sentinel Roleplay." />
   
-  <!-- Open Graph / Discord Embed Preview -->
+  <!-- Open Graph / Meta -->
   <meta property="og:title" content="Sentinel Roleplay - ER:LC Roblox Community" />
   <meta property="og:description" content="Premier Semi-Serious Emergency Response Community in Liberty County. Join with code SENTINEL-RP." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sentinelroleplay.com" />
   <meta property="og:image" content="banner.png" />
   
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,12 @@
     <span class="inline-flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
       Welcome to Sentinel Roleplay &bull; Daily Scheduled Server Shifts &bull; Join with code:
-      <code class="px-2 py-0.5 rounded bg-emerald-900/80 text-white font-mono font-bold">SENTINEL-RP</code>
+      <code class="px-2 py-0.5 rounded bg-emerald-900/80 text-white font-mono font-bold" id="topAnnouncementCode">SENTINEL-RP</code>
     </span>
   </div>
 
   <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-[#07150c]/90 backdrop-blur-md border-b border-emerald-900/50">
+  <header class="sticky top-0 z-40 bg-[#07150c]/90 backdrop-blur-md border-b border-emerald-900/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between">
       
       <!-- Brand & Emblem -->
@@ -48,42 +48,52 @@
               <circle cx="50" cy="30" r="16" fill="#f0fdf4" opacity="0.9" />
               <polygon points="50,15 15,70 85,70" fill="#047857" />
               <polygon points="50,22 28,70 72,70" fill="#10b981" />
+              <polygon points="40,55 35,75 45,75" fill="#064e3b" />
+              <polygon points="60,55 55,75 65,75" fill="#064e3b" />
               <path d="M50 86 C40 76 60 76 50 86" stroke="#84cc16" stroke-width="3" fill="none" />
             </svg>
           </div>
         </div>
         <div>
-          <span class="font-black text-white text-lg tracking-wider block uppercase leading-none">SENTINEL</span>
+          <span class="font-black text-white text-lg tracking-wider block uppercase leading-none" id="navServerName">SENTINEL</span>
           <span class="text-[10px] tracking-[0.25em] text-emerald-400 font-bold uppercase block mt-0.5">ROLEPLAY</span>
         </div>
       </a>
 
       <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-300">
         <a href="#about" class="hover:text-emerald-400 transition-colors">Overview</a>
-        <a href="#departments" class="hover:text-emerald-400 transition-colors">Agencies & Units</a>
-        <a href="#rules" class="hover:text-emerald-400 transition-colors">Community Rules</a>
+        <a href="#departments" class="hover:text-emerald-400 transition-colors">Agencies</a>
+        <a href="#rules" class="hover:text-emerald-400 transition-colors">Server Rules</a>
+        <a href="#staff" class="hover:text-emerald-400 transition-colors">Staff Team</a>
       </nav>
 
       <!-- Quick Action Buttons -->
       <div class="flex items-center gap-3">
-        <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-[#0c2214] hover:bg-[#11301d] text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-sm">
-          Discord
+        <!-- Staff Portal Quick Access Button -->
+        <button onclick="openStaffModal()" class="px-3 py-2 rounded-xl bg-slate-900/90 hover:bg-emerald-950 text-slate-300 hover:text-emerald-300 border border-slate-700/80 hover:border-emerald-500/60 text-xs font-bold transition-all shadow-sm flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span>Staff Login</span>
+        </button>
+
+        <a id="navDiscordBtn" href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-[#0c2214] hover:bg-[#11301d] text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-sm items-center gap-1.5">
+          <span>Discord</span>
         </a>
-        <a href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-xs font-bold shadow-lg shadow-emerald-950/80 transition-all">
+        <a id="navJoinBtn" href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-xs font-bold shadow-lg shadow-emerald-950/80 transition-all">
           Join Server
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with Banner -->
+  <!-- Hero Section with Scenic Banner -->
   <section id="about" class="relative overflow-hidden pt-10 pb-20 lg:pt-14 lg:pb-24 border-b border-emerald-900/40 bg-radial-gradient">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
-      <!-- Visual Banner Showcase -->
+      <!-- Visual Banner Card -->
       <div class="mb-10 relative rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl shadow-emerald-950/80 group">
         <img 
+          id="heroBannerImg"
           src="banner.png" 
           alt="Sentinel Roleplay Server Banner" 
           class="w-full h-[280px] sm:h-[380px] lg:h-[420px] object-cover object-center group-hover:scale-[1.01] transition-transform duration-700"
@@ -102,20 +112,22 @@
             </div>
             <div>
               <span class="text-xs uppercase tracking-widest font-black text-emerald-400">Emergency Response: Liberty County</span>
-              <h1 class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight">SENTINEL ROLEPLAY</h1>
+              <h1 id="heroServerName" class="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight">SENTINEL ROLEPLAY</h1>
             </div>
           </div>
 
-          <span class="px-3 py-1.5 rounded-xl bg-emerald-950/80 border border-emerald-700/80 text-xs font-bold text-emerald-300 backdrop-blur inline-flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Server Active &bull; Liberty County
-          </span>
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-950/80 border border-emerald-700/80 text-xs font-bold text-emerald-300 backdrop-blur flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Live on Roblox
+            </span>
+          </div>
         </div>
       </div>
 
       <!-- Hero Header & Tagline -->
       <div class="text-center max-w-3xl mx-auto">
-        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-medium mb-8">
+        <p id="heroTagline" class="text-lg sm:text-xl text-slate-300 leading-relaxed font-medium mb-8">
           Premier Semi-Serious Emergency Response Community in Liberty County. Experience rural county beats, high-speed highway interdiction, and structured emergency response roleplay.
         </p>
 
@@ -128,29 +140,29 @@
             <code id="joinCodeText" class="font-mono text-2xl font-black text-emerald-300 tracking-wider">
               SENTINEL-RP
             </code>
-            <button onclick="copyServerCode()" id="copyBtn" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-all shadow-md">
-              Copy Code
+            <button onclick="copyServerCode()" id="copyBtn" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-all shadow-md flex items-center gap-1">
+              <span>Copy Code</span>
             </button>
           </div>
         </div>
 
         <!-- Major Action Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3.5">
-          <a href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-xl shadow-emerald-950/80 transition-all">
-            Launch Game in Roblox
+          <a id="heroJoinBtn" href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-xl shadow-emerald-950/80 transition-all flex items-center gap-2">
+            <span>Launch Game in Roblox</span>
           </a>
-          <a href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-white font-bold text-sm transition-all">
-            Join Community Discord
+          <a id="heroDiscordBtn" href="https://discord.gg/your-server" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-white font-bold text-sm transition-all flex items-center gap-2">
+            <span>Join Community Discord</span>
           </a>
-          <a href="https://sonorancad.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-emerald-300 font-bold text-sm transition-all">
-            CAD / MDT Database
+          <a id="heroCadBtn" href="https://sonorancad.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-[#0c2014] hover:bg-[#11301e] border border-emerald-700/60 text-emerald-300 font-bold text-sm transition-all flex items-center gap-2">
+            <span>CAD / MDT Database</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Departments Section (2x2 Grid) -->
+  <!-- Departments Section (LCSO, RCPD, LSFR, LSDOT) -->
   <section id="departments" class="py-20 border-b border-emerald-900/40 bg-[#07160c]/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-14">
@@ -159,96 +171,58 @@
         <p class="text-slate-300 text-sm mt-3">Apply to represent one of Liberty County's premier public safety and emergency service divisions.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-        
-        <!-- 1. LCSO -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" id="departmentsContainer">
+        <!-- LCSO -->
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-amber-950/80 text-amber-300 border border-amber-700/60 uppercase">
-              LCSO
-            </span>
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-amber-950/80 text-amber-300 border border-amber-700/60 uppercase">LCSO</span>
             <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Recruitment Open
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors">
-            Liberty County Sheriff's Office
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
-            Enforcing countywide peace, rural patrols, mountain interdiction, high-speed pursuit management, and warrant operations.
-          </p>
-          <a href="https://discord.gg/your-server" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2">
-            Apply Through Discord &rarr;
-          </a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty County Sheriff's Office</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">Enforcing countywide peace, rural patrols, mountain interdiction, high-speed pursuit management, and warrant operations.</p>
+          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord &rarr;</a>
         </div>
 
-        <!-- 2. RCPD -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg">
+        <!-- RCPD -->
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-blue-950/80 text-blue-300 border border-blue-700/60 uppercase">
-              RCPD
-            </span>
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-blue-950/80 text-blue-300 border border-blue-700/60 uppercase">RCPD</span>
             <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Recruitment Open
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors">
-            River City Police Department
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
-            Protecting municipal districts, downtown commercial beats, traffic regulation, and rapid tactical emergency response.
-          </p>
-          <a href="https://discord.gg/your-server" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2">
-            Apply Through Discord &rarr;
-          </a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5">River City Police Department</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">Protecting municipal districts, downtown commercial beats, traffic regulation, and rapid tactical emergency response.</p>
+          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord &rarr;</a>
         </div>
 
-        <!-- 3. LSFR -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg">
+        <!-- LSFR -->
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-red-950/80 text-red-300 border border-red-700/60 uppercase">
-              LSFR
-            </span>
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-red-950/80 text-red-300 border border-red-700/60 uppercase">LSFR</span>
             <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Recruitment Open
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors">
-            Liberty State Fire Rescue
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
-            Advanced life support paramedic response, structural fire suppression, vehicle extrication, and wilderness mountain search & rescue.
-          </p>
-          <a href="https://discord.gg/your-server" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2">
-            Apply Through Discord &rarr;
-          </a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty State Fire Rescue</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">Advanced life support paramedic response, structural fire suppression, vehicle extrication, and wilderness mountain search & rescue.</p>
+          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord &rarr;</a>
         </div>
 
-        <!-- 4. LSDOT -->
-        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 hover:bg-[#0f291a] transition-all duration-300 group shadow-lg">
+        <!-- LSDOT -->
+        <div class="bg-[#0c2014]/90 border border-emerald-800/40 rounded-2xl p-6 hover:border-emerald-500/60 transition-all duration-300 group shadow-lg">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-orange-950/80 text-orange-300 border border-orange-700/60 uppercase">
-              LSDOT
-            </span>
+            <span class="text-xs font-black tracking-wider px-3 py-1 rounded-md bg-orange-950/80 text-orange-300 border border-orange-700/60 uppercase">LSDOT</span>
             <span class="text-[11px] font-medium text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Recruitment Open
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Recruitment Open
             </span>
           </div>
-          <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-emerald-300 transition-colors">
-            Liberty State DOT
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
-            Highway incident management, mountain road weather safety, debris clearing, temporary lane closures, and heavy towing recovery.
-          </p>
-          <a href="https://discord.gg/your-server" target="_blank" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-200 gap-2">
-            Apply Through Discord &rarr;
-          </a>
+          <h3 class="text-xl font-extrabold text-white mb-2.5">Liberty State DOT</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-6">Highway incident management, mountain road weather safety, debris clearing, temporary lane closures, and heavy towing recovery.</p>
+          <a href="https://discord.gg/your-server" target="_blank" class="text-xs font-bold text-emerald-400 hover:text-emerald-200">Apply Through Discord &rarr;</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -259,56 +233,184 @@
       <div class="text-center max-w-xl mx-auto mb-12">
         <span class="text-xs uppercase tracking-[0.2em] font-black text-lime-400 mb-2 block">Standards & Conduct</span>
         <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Server Rules & Guidelines</h2>
-        <p class="text-slate-300 text-sm mt-3">Compliance with community standards is mandatory for all citizens and first responders.</p>
       </div>
 
       <div class="space-y-3.5">
         <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
           <h4 class="text-base font-bold text-white mb-1">1. No Random Deathmatch (RDM)</h4>
-          <p class="text-sm text-slate-300">Do not harm, attack, or execute other players without prior verbal/roleplay initiation and a clear, realistic motive.</p>
+          <p class="text-sm text-slate-300">Do not harm or attack other players without prior verbal initiation and a clear, realistic motive.</p>
         </div>
         <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
           <h4 class="text-base font-bold text-white mb-1">2. No Vehicle Deathmatch (VDM)</h4>
-          <p class="text-sm text-slate-300">Never deliberately ram your vehicle into pedestrians or other cars without authorized pursuit PIT maneuvers.</p>
+          <p class="text-sm text-slate-300">Never deliberately ram vehicles into pedestrians or other cars without authorized pursuit maneuvers.</p>
         </div>
         <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
           <h4 class="text-base font-bold text-white mb-1">3. Fear RP & Value of Life</h4>
           <p class="text-sm text-slate-300">Value your character's life. When held at gunpoint or significantly outnumbered, reasonably comply with demands.</p>
         </div>
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">4. New Life Rule (NLR)</h4>
-          <p class="text-sm text-slate-300">Upon respawning after death, you forget all events leading to your demise and cannot return to that scene for 15 minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Administration & Staff Team Section -->
+  <section id="staff" class="py-20 border-b border-emerald-900/40 bg-[#07160c]/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12 pb-6 border-b border-emerald-900/60">
+        <div>
+          <span class="text-xs uppercase tracking-[0.2em] font-black text-emerald-400 mb-1 block">Staff Team & Administration</span>
+          <h2 class="text-3xl font-black text-white tracking-tight">Server Leadership</h2>
         </div>
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">5. Unrealistic Driving & Off-Roading</h4>
-          <p class="text-sm text-slate-300">Supercars and low-clearance vehicles cannot drive over steep mountain rockfaces or off-road trails. Stay on asphalt and designated dirt roads.</p>
+        
+        <!-- Staff Editor Login Trigger -->
+        <button onclick="openStaffModal()" class="px-4 py-2 rounded-xl bg-emerald-950/80 hover:bg-emerald-900/90 text-emerald-300 border border-emerald-700/60 text-xs font-bold transition-all shadow-md flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          <span>Staff Editor Portal</span>
+          <span class="text-[10px] bg-emerald-900 px-1.5 py-0.5 rounded text-emerald-200 border border-emerald-700/80">Passcode Protected</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
+            S
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Server Founder</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Community Owner</div>
+          </div>
         </div>
-        <div class="bg-[#0b1c11]/80 border border-emerald-900/40 rounded-xl p-5">
-          <h4 class="text-base font-bold text-white mb-1">6. Priority & Robbery Cooldowns</h4>
-          <p class="text-sm text-slate-300">Major crimes (Bank robbery, jewelry store heist, hostage standoff) require active supervisor presence and a 20-minute cooldown.</p>
+        <div class="bg-[#0c2014]/70 border border-emerald-900/40 rounded-xl p-4 flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-400/40 flex items-center justify-center font-black text-white text-base shadow-md">
+            H
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Head of Staff</div>
+            <div class="text-xs text-emerald-400/90 font-medium">Executive Admin</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#051007] py-12 text-xs text-slate-400 border-t border-emerald-900/40 text-center">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-3">
+  <footer class="bg-[#051007] py-12 text-xs text-slate-400 border-t border-emerald-900/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-4">
       <div class="flex items-center justify-center gap-2">
-        <span class="font-extrabold text-white text-sm uppercase">SENTINEL ROLEPLAY</span>
+        <span class="font-extrabold text-white text-sm tracking-wider uppercase">SENTINEL ROLEPLAY</span>
         <span class="text-emerald-500">&bull;</span>
-        <span>Official Server Portal</span>
+        <span class="text-slate-400">Official Server Portal</span>
+        <span class="text-emerald-500">&bull;</span>
+        <button onclick="openStaffModal()" class="text-emerald-400 hover:text-emerald-300 underline font-semibold">Staff Editor</button>
       </div>
       <p class="text-slate-400">
         &copy; 2026 Sentinel Roleplay. Operating on <strong>https://sentinelroleplay.com</strong>.
       </p>
-      <p class="max-w-lg mx-auto text-[11px] text-slate-400">
-        Independent Roblox community. Not affiliated with, endorsed, or sponsored by Police Roleplay Community or Roblox Corporation.
-      </p>
     </div>
   </footer>
 
+  <!-- STAFF EDITOR MODAL (Password: S1RP09) -->
+  <div id="staffModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#081b10] border border-emerald-600/60 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 text-left">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-emerald-900/80">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-700/80 flex items-center justify-center text-emerald-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-black text-white">Staff Management Portal</h3>
+            <p class="text-xs text-emerald-400/90 font-medium">Sentinel Roleplay Staff Command & Editor</p>
+          </div>
+        </div>
+        <button onclick="closeStaffModal()" class="w-8 h-8 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-lg">&times;</button>
+      </div>
+
+      <!-- Password Lock Screen View -->
+      <div id="staffAuthScreen" class="py-8 text-center max-w-md mx-auto">
+        <div class="w-14 h-14 rounded-2xl bg-emerald-950/80 border border-emerald-600/50 flex items-center justify-center text-emerald-400 mx-auto mb-4">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h4 class="text-base font-bold text-white mb-1.5">Enter Staff Passcode</h4>
+        <p class="text-xs text-slate-300 mb-5 leading-relaxed">
+          Authorized staff members only. Enter the team passcode to modify server details, update join codes, or export fresh website files.
+        </p>
+
+        <div class="space-y-3">
+          <input 
+            type="password" 
+            id="staffPasswordInput" 
+            placeholder="Enter Staff Password" 
+            onkeydown="if(event.key==='Enter') verifyStaffPassword()"
+            class="w-full bg-[#061209] border border-emerald-800/80 rounded-xl px-4 py-2.5 text-center text-sm font-mono tracking-widest text-white focus:outline-none focus:border-emerald-500"
+          />
+          <div id="passwordError" class="text-xs text-red-400 font-semibold hidden">Incorrect password. Please try again.</div>
+          <button 
+            onclick="verifyStaffPassword()" 
+            class="w-full py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg shadow-emerald-950/80 transition-all"
+          >
+            Unlock Staff Editor
+          </button>
+        </div>
+      </div>
+
+      <!-- Staff Editor Screen View (Unlocked) -->
+      <div id="staffEditorScreen" class="py-4 hidden space-y-6">
+        <div class="bg-emerald-950/40 border border-emerald-600/40 rounded-xl p-3 flex items-center justify-between text-xs">
+          <span class="text-emerald-300 font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Staff Authenticated (Session Active)
+          </span>
+          <button onclick="lockStaffModal()" class="text-slate-400 hover:text-white underline">Lock</button>
+        </div>
+
+        <!-- Quick Edit Form -->
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">In-Game Server Join Code</label>
+            <input type="text" id="editServerCode" value="SENTINEL-RP" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-emerald-300 font-mono font-bold focus:outline-none focus:border-emerald-500" />
+            <span class="text-[11px] text-slate-400">Updates the join code displayed in the announcement banner and hero box.</span>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">Server Tagline / Mission</label>
+            <textarea id="editServerTagline" rows="2" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:border-emerald-500">Premier Semi-Serious Emergency Response Community in Liberty County. Experience rural county beats, high-speed highway interdiction, and structured emergency response roleplay.</textarea>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Discord Invite Link</label>
+              <input type="text" id="editDiscordUrl" value="https://discord.gg/your-server" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Roblox Join Link</label>
+              <input type="text" id="editJoinUrl" value="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">CAD / MDT Database Link</label>
+            <input type="text" id="editCadUrl" value="https://sonorancad.com" class="w-full bg-[#061209] border border-emerald-900 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500" />
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-4 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center gap-3">
+          <button onclick="applyStaffEdits()" class="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-all">
+            Save &amp; Apply Changes to Page
+          </button>
+          <button onclick="exportUpdatedIndexHtml()" class="w-full sm:w-auto px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-emerald-300 border border-emerald-800/80 font-bold text-xs rounded-xl transition-all">
+            Download Updated index.html
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
+    const STAFF_PASSCODE = "S1RP09";
+
     function copyServerCode() {
       const code = document.getElementById('joinCodeText').innerText.trim();
       navigator.clipboard.writeText(code).then(() => {
@@ -321,6 +423,100 @@
           btn.classList.remove('bg-lime-600');
         }, 2000);
       });
+    }
+
+    function openStaffModal() {
+      const modal = document.getElementById('staffModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      const auth = sessionStorage.getItem('sentinel_staff_auth');
+      if (auth === 'true') {
+        showStaffEditor();
+      } else {
+        document.getElementById('staffAuthScreen').classList.remove('hidden');
+        document.getElementById('staffEditorScreen').classList.add('hidden');
+        setTimeout(() => {
+          document.getElementById('staffPasswordInput').focus();
+        }, 100);
+      }
+    }
+
+    function closeStaffModal() {
+      const modal = document.getElementById('staffModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function verifyStaffPassword() {
+      const pass = document.getElementById('staffPasswordInput').value.trim();
+      const err = document.getElementById('passwordError');
+      if (pass === STAFF_PASSCODE) {
+        err.classList.add('hidden');
+        sessionStorage.setItem('sentinel_staff_auth', 'true');
+        showStaffEditor();
+      } else {
+        err.classList.remove('hidden');
+      }
+    }
+
+    function showStaffEditor() {
+      document.getElementById('staffAuthScreen').classList.add('hidden');
+      document.getElementById('staffEditorScreen').classList.remove('hidden');
+    }
+
+    function lockStaffModal() {
+      sessionStorage.removeItem('sentinel_staff_auth');
+      document.getElementById('staffPasswordInput').value = '';
+      document.getElementById('staffEditorScreen').classList.add('hidden');
+      document.getElementById('staffAuthScreen').classList.remove('hidden');
+    }
+
+    function applyStaffEdits() {
+      const newCode = document.getElementById('editServerCode').value.trim();
+      const newTagline = document.getElementById('editServerTagline').value.trim();
+      const newDiscord = document.getElementById('editDiscordUrl').value.trim();
+      const newJoin = document.getElementById('editJoinUrl').value.trim();
+      const newCad = document.getElementById('editCadUrl').value.trim();
+
+      if (newCode) {
+        document.getElementById('joinCodeText').innerText = newCode;
+        const topCode = document.getElementById('topAnnouncementCode');
+        if (topCode) topCode.innerText = newCode;
+      }
+      if (newTagline) {
+        document.getElementById('heroTagline').innerText = newTagline;
+      }
+      if (newDiscord) {
+        const d1 = document.getElementById('navDiscordBtn');
+        const d2 = document.getElementById('heroDiscordBtn');
+        if (d1) d1.href = newDiscord;
+        if (d2) d2.href = newDiscord;
+      }
+      if (newJoin) {
+        const j1 = document.getElementById('navJoinBtn');
+        const j2 = document.getElementById('heroJoinBtn');
+        if (j1) j1.href = newJoin;
+        if (j2) j2.href = newJoin;
+      }
+      if (newCad) {
+        const cadBtn = document.getElementById('heroCadBtn');
+        if (cadBtn) cadBtn.href = newCad;
+      }
+
+      alert('Changes applied to page view! To save permanently on GitHub, click "Download Updated index.html" and upload it to your GitHub repo.');
+    }
+
+    function exportUpdatedIndexHtml() {
+      const clone = document.documentElement.outerHTML;
+      const blob = new Blob([clone], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
   </script>
 </body>
