@@ -251,6 +251,35 @@
           </div>
         </div>
 
+        <!-- Citizen Account & Unique CIV ID Status Bar -->
+        <div id="cadAccountBanner" class="mb-6 p-4 rounded-2xl bg-[#06130a] border border-emerald-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-600/70 flex items-center justify-center text-emerald-400 flex-shrink-0">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11m0 0a8.003 8.003 0 0115.357-2m1.571 2a13.918 13.918 0 01-.286 2.753m-1.714 5.247A8 8 0 0012 19a8 8 0 00-6.938-4"/></svg>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span id="cadAccountName" class="font-bold text-white text-sm">Guest Citizen</span>
+                <span id="cadAccountBadge" class="text-[10px] font-mono font-black px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-600">
+                  CIV ID: NOT ASSIGNED
+                </span>
+              </div>
+              <p id="cadAccountDesc" class="text-xs text-slate-400 mt-0.5">
+                Register with email &amp; password to receive your own permanent unique Citizen ID when you clock in.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="cadAuthBtn" onclick="siteCadOpenAuth('signup')" class="px-3.5 py-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow transition-all flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+              <span>Create Account / Login</span>
+            </button>
+            <button id="cadLogoutBtn" onclick="siteCadLogout()" class="hidden px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs rounded-xl transition-all">
+              Log Out
+            </button>
+          </div>
+        </div>
+
         <!-- Terminal Body -->
         <div id="cadLoginGateway" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="lg:col-span-1 bg-[#06130a] border border-emerald-900/80 rounded-2xl p-6">
@@ -483,6 +512,85 @@
 
         </div>
 
+      </div>
+
+      <!-- CITIZEN ACCOUNT AUTH MODAL -->
+      <div id="siteCadAuthModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-[#081a0e] border border-emerald-700/80 rounded-2xl p-6 max-w-md w-full shadow-2xl space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11m0 0a8.003 8.003 0 0115.357-2m1.571 2a13.918 13.918 0 01-.286 2.753m-1.714 5.247A8 8 0 0012 19a8 8 0 00-6.938-4"/></svg>
+              <span id="siteCadAuthModalTitle">Create Citizen Account</span>
+            </div>
+            <button onclick="siteCadCloseAuth()" class="text-slate-400 hover:text-white text-xs font-bold px-2 py-1">Close</button>
+          </div>
+
+          <!-- Auth Mode Toggle -->
+          <div class="flex bg-[#040e07] p-1 rounded-xl border border-emerald-900 text-xs font-semibold">
+            <button id="siteCadTabSignup" onclick="siteCadSetAuthMode('signup')" class="flex-1 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all">
+              Create Account (Assign CIV ID)
+            </button>
+            <button id="siteCadTabLogin" onclick="siteCadSetAuthMode('login')" class="flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all">
+              Log In
+            </button>
+          </div>
+
+          <p id="siteCadAuthDescription" class="text-xs text-slate-300 leading-relaxed">
+            Register with email &amp; password to receive your own permanent unique Citizen ID (e.g. CIV-74291) automatically assigned when clocking in.
+          </p>
+
+          <form onsubmit="siteCadSubmitAuth(event)" class="space-y-3.5">
+            <div id="siteCadNameField">
+              <label class="block text-[11px] font-semibold text-slate-300 mb-1 uppercase tracking-wider">
+                Full Name / Character Name
+              </label>
+              <input 
+                type="text" 
+                id="siteCadAuthName" 
+                placeholder="e.g. Marcus Vance or Tyler R." 
+                class="w-full bg-[#030a05] border border-emerald-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-400"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-300 mb-1 uppercase tracking-wider">
+                Email Address
+              </label>
+              <input 
+                type="email" 
+                required 
+                id="siteCadAuthEmail" 
+                placeholder="e.g. yourname@example.com" 
+                class="w-full bg-[#030a05] border border-emerald-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-400"
+              />
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-300 mb-1 uppercase tracking-wider">
+                Password
+              </label>
+              <input 
+                type="password" 
+                required 
+                id="siteCadAuthPassword" 
+                placeholder="At least 4 characters" 
+                class="w-full bg-[#030a05] border border-emerald-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-400"
+              />
+            </div>
+
+            <div id="siteCadAuthError" class="hidden p-2.5 bg-red-950/80 border border-red-800 text-red-300 text-xs rounded-xl font-medium"></div>
+            <div id="siteCadAuthSuccess" class="hidden p-2.5 bg-emerald-950/80 border border-emerald-700 text-emerald-300 text-xs rounded-xl font-medium"></div>
+
+            <button 
+              type="submit" 
+              id="siteCadAuthSubmitBtn" 
+              class="w-full py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 uppercase tracking-wider"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11m0 0a8.003 8.003 0 0115.357-2m1.571 2a13.918 13.918 0 01-.286 2.753m-1.714 5.247A8 8 0 0012 19a8 8 0 00-6.938-4"/></svg>
+              <span>Register &amp; Assign Unique CIV ID</span>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -984,6 +1092,215 @@
     let cadShiftSecs = 14 * 60 + 32;
     let cadTimer = null;
     let supervisorUnlocked = false;
+    let cadAuthMode = 'signup';
+    let cadCurrentUser = null;
+
+    // Initialize stored user if present
+    try {
+      const stored = localStorage.getItem('erlc_cad_active_user');
+      if (stored) {
+        cadCurrentUser = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Storage read error:', e);
+    }
+
+    function siteCadUpdateAuthUi() {
+      const nameEl = document.getElementById('cadAccountName');
+      const badgeEl = document.getElementById('cadAccountBadge');
+      const descEl = document.getElementById('cadAccountDesc');
+      const authBtn = document.getElementById('cadAuthBtn');
+      const logoutBtn = document.getElementById('cadLogoutBtn');
+
+      if (!nameEl) return;
+
+      if (cadCurrentUser) {
+        nameEl.innerText = cadCurrentUser.displayName;
+        badgeEl.innerText = 'CIV ID: ' + cadCurrentUser.uniqueCivId;
+        badgeEl.className = 'text-[10px] font-mono font-black px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500 shadow-sm';
+        descEl.innerText = 'Authenticated Account: ' + cadCurrentUser.email + ' • Unique CIV ID locked for shift records & 911 calls.';
+        if (authBtn) {
+          authBtn.classList.add('hidden');
+        }
+        if (logoutBtn) {
+          logoutBtn.classList.remove('hidden');
+        }
+      } else {
+        nameEl.innerText = 'Guest Citizen';
+        badgeEl.innerText = 'CIV ID: NOT ASSIGNED';
+        badgeEl.className = 'text-[10px] font-mono font-black px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800';
+        descEl.innerText = 'Register with email & password to receive your own permanent unique Citizen ID when you clock in.';
+        if (authBtn) {
+          authBtn.classList.remove('hidden');
+        }
+        if (logoutBtn) {
+          logoutBtn.classList.add('hidden');
+        }
+      }
+    }
+
+    function siteCadOpenAuth(mode) {
+      cadAuthMode = mode || 'signup';
+      siteCadSetAuthMode(cadAuthMode);
+      const modal = document.getElementById('siteCadAuthModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function siteCadCloseAuth() {
+      const modal = document.getElementById('siteCadAuthModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+      const err = document.getElementById('siteCadAuthError');
+      const succ = document.getElementById('siteCadAuthSuccess');
+      if (err) err.classList.add('hidden');
+      if (succ) succ.classList.add('hidden');
+    }
+
+    function siteCadSetAuthMode(mode) {
+      cadAuthMode = mode;
+      const title = document.getElementById('siteCadAuthModalTitle');
+      const desc = document.getElementById('siteCadAuthDescription');
+      const tabSignup = document.getElementById('siteCadTabSignup');
+      const tabLogin = document.getElementById('siteCadTabLogin');
+      const nameField = document.getElementById('siteCadNameField');
+      const submitBtn = document.getElementById('siteCadAuthSubmitBtn');
+      const err = document.getElementById('siteCadAuthError');
+      const succ = document.getElementById('siteCadAuthSuccess');
+
+      if (err) err.classList.add('hidden');
+      if (succ) succ.classList.add('hidden');
+
+      if (mode === 'signup') {
+        if (title) title.innerText = 'Create Citizen Account';
+        if (desc) desc.innerText = 'Register with email & password to receive your own permanent unique Citizen ID (e.g. CIV-74291) automatically assigned when clocking in.';
+        if (tabSignup) {
+          tabSignup.className = 'flex-1 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all';
+        }
+        if (tabLogin) {
+          tabLogin.className = 'flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+        }
+        if (nameField) nameField.classList.remove('hidden');
+        if (submitBtn) submitBtn.innerHTML = '<span>Register &amp; Assign Unique CIV ID</span>';
+      } else {
+        if (title) title.innerText = 'Sign In to Account';
+        if (desc) desc.innerText = 'Enter your account credentials to resume your session and load your unique Civilian ID.';
+        if (tabSignup) {
+          tabSignup.className = 'flex-1 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all';
+        }
+        if (tabLogin) {
+          tabLogin.className = 'flex-1 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all';
+        }
+        if (nameField) nameField.classList.add('hidden');
+        if (submitBtn) submitBtn.innerHTML = '<span>Sign In to Terminal</span>';
+      }
+    }
+
+    function siteCadSubmitAuth(e) {
+      e.preventDefault();
+      const email = document.getElementById('siteCadAuthEmail').value.trim().toLowerCase();
+      const pass = document.getElementById('siteCadAuthPassword').value;
+      const name = document.getElementById('siteCadAuthName') ? document.getElementById('siteCadAuthName').value.trim() : '';
+      const err = document.getElementById('siteCadAuthError');
+      const succ = document.getElementById('siteCadAuthSuccess');
+
+      if (err) err.classList.add('hidden');
+      if (succ) succ.classList.add('hidden');
+
+      let users = [];
+      try {
+        const storedUsers = localStorage.getItem('erlc_cad_users');
+        if (storedUsers) users = JSON.parse(storedUsers);
+      } catch (ex) {
+        users = [];
+      }
+
+      if (cadAuthMode === 'signup') {
+        if (!name) {
+          if (err) {
+            err.innerText = 'Please provide a character or display name.';
+            err.classList.remove('hidden');
+          }
+          return;
+        }
+        if (pass.length < 4) {
+          if (err) {
+            err.innerText = 'Password must be at least 4 characters.';
+            err.classList.remove('hidden');
+          }
+          return;
+        }
+
+        const existing = users.find(u => u.email === email);
+        if (existing) {
+          if (err) {
+            err.innerText = 'An account with this email already exists. Please log in.';
+            err.classList.remove('hidden');
+          }
+          return;
+        }
+
+        // Generate guaranteed unique CIV ID
+        const generatedCivId = 'CIV-' + Math.floor(10000 + Math.random() * 90000);
+        const newUser = {
+          id: 'usr_' + Date.now(),
+          email: email,
+          password: pass,
+          displayName: name,
+          uniqueCivId: generatedCivId,
+          createdAt: new Date().toISOString()
+        };
+
+        users.push(newUser);
+        localStorage.setItem('erlc_cad_users', JSON.stringify(users));
+        localStorage.setItem('erlc_cad_active_user', JSON.stringify(newUser));
+        cadCurrentUser = newUser;
+
+        if (succ) {
+          succ.innerText = 'Account registered! Your unique ID ' + generatedCivId + ' has been assigned.';
+          succ.classList.remove('hidden');
+        }
+
+        siteCadUpdateAuthUi();
+        setTimeout(() => {
+          siteCadCloseAuth();
+        }, 1200);
+
+      } else {
+        // Login
+        const user = users.find(u => u.email === email && u.password === pass);
+        if (!user) {
+          if (err) {
+            err.innerText = 'Invalid email or password. Please verify your credentials.';
+            err.classList.remove('hidden');
+          }
+          return;
+        }
+
+        cadCurrentUser = user;
+        localStorage.setItem('erlc_cad_active_user', JSON.stringify(user));
+        if (succ) {
+          succ.innerText = 'Welcome back, ' + user.displayName + '! Loaded CIV ID ' + user.uniqueCivId;
+          succ.classList.remove('hidden');
+        }
+
+        siteCadUpdateAuthUi();
+        setTimeout(() => {
+          siteCadCloseAuth();
+        }, 800);
+      }
+    }
+
+    function siteCadLogout() {
+      cadCurrentUser = null;
+      localStorage.removeItem('erlc_cad_active_user');
+      siteCadUpdateAuthUi();
+      alert('You have logged out of your Citizen Account.');
+    }
 
     function siteCadCivilianLogin() {
       document.getElementById('siteCadCodeInput').value = 'CIV-100';
@@ -1025,8 +1342,18 @@
         document.getElementById('cadActiveDeptBadge').classList.add('flex');
         document.getElementById('cadActiveDeptName').innerText = currentCadDept.short;
         document.getElementById('cadUnitDept').innerText = currentCadDept.name;
-        document.getElementById('cadUnitCallsign').innerText = currentCadDept.short + '-' + Math.floor(100 + Math.random() * 899);
-        document.getElementById('cadStatusBadge').innerText = '10-8 IN SERVICE';
+
+        // If Civilian, assign unique CIV ID
+        if (currentCadDept.type === 'civ') {
+          const assignedId = cadCurrentUser ? cadCurrentUser.uniqueCivId : 'CIV-88410';
+          const assignedName = cadCurrentUser ? cadCurrentUser.displayName : 'Citizen Patrol';
+          document.getElementById('cadUnitCallsign').innerText = assignedName + ' (' + assignedId + ')';
+          document.getElementById('cadStatusBadge').innerText = '10-8 CITIZEN CLOCKED IN';
+        } else {
+          document.getElementById('cadUnitCallsign').innerText = currentCadDept.short + '-' + Math.floor(100 + Math.random() * 899);
+          document.getElementById('cadStatusBadge').innerText = '10-8 IN SERVICE';
+        }
+
         document.getElementById('cadStatusBadge').className = 'text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 uppercase';
         
         if (!cadTimer) {
@@ -1108,6 +1435,9 @@
         res.innerHTML = '<div class="w-full text-center text-slate-400 py-1">No matching state records found for "' + q + '". Record clear.</div>';
       }
     }
+
+    // Initialize Auth UI upon page load
+    siteCadUpdateAuthUi();
   </script>
 </body>
 </html>
